@@ -353,202 +353,6 @@ a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer}
 @keyframes wp{0%,100%{box-shadow:0 10px 40px rgba(37,211,102,.25)}50%{box-shadow:0 10px 56px rgba(37,211,102,.4)}}
 @keyframes spin{to{--angle:360deg}}
 @property --angle{syntax:'<angle>';initial-value:0deg;inherits:false}
-
-/* ===== UNIVERSAL MOBILE FIXES ===== */
-html, body{
-  overflow-x:hidden !important;
-  width:100%;
-  max-width:100%;
-}
-
-img, svg, video, canvas, iframe{
-  max-width:100% !important;
-  height:auto !important;
-}
-
-.hero,
-.srv-s,
-.why-s,
-.cta-s,
-.lang-s,
-.how-s,
-.faq-s,
-.price-s,
-.ref-s,
-.trust,
-.stats-s{
-  overflow:hidden;
-}
-
-.hero{
-  min-height:100vh !important;
-  min-height:100svh !important;
-}
-
-@media (max-width: 768px){
-
-  body{
-    font-size:16px !important;
-  }
-
-  section,
-  .hero,
-  .srv-s,
-  .why-s,
-  .faq-s,
-  .price-s,
-  .ref-s,
-  .cta-s,
-  .lang-s,
-  .how-s,
-  .stats-s,
-  .trust,
-  .foot-full{
-    padding-left:20px !important;
-    padding-right:20px !important;
-  }
-
-  .ni{
-    padding:0 16px !important;
-  }
-
-  .hero{
-    padding-top:120px !important;
-    padding-bottom:80px !important;
-    min-height:auto !important;
-  }
-
-  .hero h1{
-    font-size:clamp(34px, 9vw, 48px) !important;
-    line-height:1.3 !important;
-    word-break:break-word;
-  }
-
-  .hero-p{
-    font-size:16px !important;
-    line-height:1.8 !important;
-  }
-
-  .hero-wm{
-    font-size:38vw !important;
-  }
-
-  h2{
-    font-size:30px !important;
-    line-height:1.3 !important;
-  }
-
-  h3{
-    font-size:22px !important;
-    line-height:1.4 !important;
-  }
-
-  p{
-    word-break:break-word;
-  }
-
-  .srv-g,
-  .price-g,
-  .ref-g,
-  .foot-grid,
-  .bento,
-  .lang-g{
-    grid-template-columns:1fr !important;
-    gap:20px !important;
-  }
-
-  .stats-g,
-  .trust-in{
-    flex-direction:column !important;
-    gap:24px !important;
-    align-items:center !important;
-  }
-
-  .bc:nth-child(1),
-  .bc:nth-child(2),
-  .bc:nth-child(3),
-  .bc:nth-child(4){
-    grid-column:span 1 !important;
-  }
-
-  .wa{
-    width:100% !important;
-    justify-content:center !important;
-    padding:18px 22px !important;
-    font-size:16px !important;
-  }
-
-  .modal{
-    width:100% !important;
-    max-width:100% !important;
-    padding:28px 20px !important;
-    border-radius:18px !important;
-  }
-
-  .modal-input-row,
-  .ref-row,
-  .ref-link-box,
-  .foot-bottom{
-    flex-direction:column !important;
-    align-items:stretch !important;
-  }
-
-  .ref-link-box input{
-    width:100%;
-  }
-
-  .faq{
-    max-width:100% !important;
-  }
-
-  .fq{
-    gap:16px !important;
-  }
-
-  .fq span:first-child{
-    font-size:18px !important;
-  }
-
-  .pc,
-  .rc,
-  .svc-in,
-  .bc{
-    padding:28px 20px !important;
-  }
-
-  .tl-s,
-  .rs{
-    gap:16px !important;
-  }
-
-  .foot-grid{
-    grid-template-columns:1fr !important;
-  }
-
-  .foot-bottom{
-    text-align:center !important;
-  }
-
-  .waf{
-    width:58px !important;
-    height:58px !important;
-    left:20px !important;
-    bottom:20px !important;
-  }
-
-  .stk a{
-    font-size:15px !important;
-    padding:16px !important;
-  }
-
-  [style*="padding:100px 48px"],
-  [style*="padding:160px 48px"],
-  [style*="padding:200px 48px"]{
-    padding-left:20px !important;
-    padding-right:20px !important;
-  }
-}
-
 </style>
 </head>
 <body>
@@ -559,10 +363,10 @@ img, svg, video, canvas, iframe{
 <div class="modal-overlay" id="orderModal">
   <div class="modal">
     <button class="modal-close" onclick="closeModal()">&times;</button>
-    <h3 id="modalTitle">طلب خدمة</h3>
+    <h3 id="modalTitle">طلب ترجمة معتمدة</h3>
     <div class="modal-service" id="modalService"></div>
     
-    <span class="modal-label" id="modalCountLabel">حدد حجم العمل</span>
+    <span class="modal-label" id="modalCountLabel">حدد عدد صفحات المستند</span>
     <div class="modal-toggle">
       <button class="modal-tog-btn active" id="togWords" onclick="setCountMode('words')">كلمات</button>
       <button class="modal-tog-btn" id="togPages" onclick="setCountMode('pages')">صفحات (250 كلمة/صفحة)</button>
@@ -575,7 +379,7 @@ img, svg, video, canvas, iframe{
     
     <div class="modal-estimate">
       <div class="modal-est-price" id="modalPrice">$0</div>
-      <div class="modal-est-label" id="modalEstLabel">التكلفة التقديرية</div>
+      <div class="modal-est-label" id="modalEstLabel">التكلفة التقديرية (شاملة التوثيق)</div>
     </div>
     
     <button class="modal-wa" id="modalWaBtn" onclick="sendOrder()">
@@ -599,10 +403,10 @@ img, svg, video, canvas, iframe{
     <button class="nl" onclick="go('services')" id="n1">الخدمات</button>
     <button class="nl" onclick="go('langs')" id="n2">اللغات</button>
     <button class="nl" onclick="go('how')" id="n3">آلية العمل</button>
-    <button class="nl" onclick="go('why')" id="n4">لماذا تدقيق</button>
+    <button class="nl" onclick="go('why')" id="n4">لماذا نحن</button>
     <button class="nl" onclick="go('specs')" id="n8">التخصصات</button>
     <button class="nl" onclick="go('faq')" id="n5">أسئلة</button>
-    <button class="nl" onclick="go('pricing')" id="n6">الأسعار</button>
+    <button class="nl" onclick="go('pricing')" id="n6" style="display:none">الأسعار</button>
     <button class="nl" onclick="go('referral')" id="n7">الإحالة</button>
     <button class="lbtn" onclick="toggleLang()" id="lb">EN</button>
   </div>
@@ -613,10 +417,10 @@ img, svg, video, canvas, iframe{
   <button onclick="go('services')" id="m1">الخدمات</button>
   <button onclick="go('langs')" id="m2">اللغات</button>
   <button onclick="go('how')" id="m3">آلية العمل</button>
-  <button onclick="go('why')" id="m4">لماذا تدقيق</button>
+  <button onclick="go('why')" id="m4">لماذا نحن</button>
   <button onclick="go('specs')" id="m8">التخصصات</button>
   <button onclick="go('faq')" id="m5">أسئلة</button>
-  <button onclick="go('pricing')" id="m6">الأسعار</button>
+  <button onclick="go('pricing')" id="m6" style="display:none">الأسعار</button>
   <button onclick="go('referral')" id="m7">الإحالة</button>
   <button onclick="toggleLang();toggleMob()" id="ml" style="color:var(--gd);border:2px solid var(--gd);padding:14px 52px;border-radius:14px;margin-top:28px;font-size:22px;font-weight:700">EN</button>
 </div>
@@ -627,12 +431,12 @@ img, svg, video, canvas, iframe{
 <svg class="hero-pat" width="100%" height="100%"><defs><pattern id="hp" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M40 0L80 40L40 80L0 40Z" fill="none" stroke="rgba(255,255,255,.6)" stroke-width=".3"/><circle cx="40" cy="40" r="14" fill="none" stroke="rgba(255,255,255,.4)" stroke-width=".2"/></pattern></defs><rect width="100%" height="100%" fill="url(#hp)"/></svg>
 <div class="hero-wm">تدقيق</div>
 <div class="hero-in"><div class="hero-c">
-  <div class="tag" id="hb">ترجمة · تحرير · صقل أكاديمي</div>
-  <h1 id="hh1">نصّك الأكاديمي يستحقّ<br>مراجعة <em>بعين باحث</em></h1>
-  <p class="hero-p" id="hp1">لا نكتب بالنيابة عنك - نضبط لغتك ونصقل أسلوبك ونضمن أن نصّك يقرأه الأستاذ بثقة.</p>
+  <div class="tag" id="hb">ترجمة معتمدة محلفة · موثقة رسمياً</div>
+  <h1 id="hh1">ترجمة معتمدة محلفة<br>بخبرة <em>تتجاوز ١٥ عاماً</em></h1>
+  <p class="hero-p" id="hp1">نتعاون مع كبرى مكاتب الترجمة المعتمدة ذات الخبرة الطويلة (أكثر من ١٥ عاماً) لتقديم ترجمة موثقة رسمياً بأعلى معايير الجودة والسرعة والدقة.</p>
   <div class="hero-cta">
-    <a href="#" class="wa" id="hcta" onclick="openOrder('trans');return false"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.913.913l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.674-.826-6.5-2.34l-.467-.39-3.65 1.223 1.223-3.65-.39-.467A9.954 9.954 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg><span id="hct">ابدأ عبر واتساب</span></a>
-    <span class="hero-note" id="hn">ردّ خلال ساعة · تقييم مجّاني</span>
+    <a href="#" class="wa" id="hcta" onclick="openOrder('trans');return false"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.913.913l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.674-.826-6.5-2.34l-.467-.39-3.65 1.223 1.223-3.65-.39-.467A9.954 9.954 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg><span id="hct">اطلب ترجمة معتمدة</span></a>
+    <span class="hero-note" id="hn">ردّ فوري · تقييم مجاني · شهادة ترجمة معتمدة</span>
       <span class="hero-note" style="margin-top:14px;display:block;opacity:.7;font-size:14px;color:var(--gd)">A subsidiary of BrainSync Educational Services Ltd (UK)</span>
   </div>
 </div></div>
@@ -659,9 +463,9 @@ img, svg, video, canvas, iframe{
 <div class="trust rv">
 <div class="trust-in">
   <div class="trust-item"><div class="trust-n" id="tr1">6</div><div class="trust-l" id="tr1l">لغات معتمدة</div></div>
-  <div class="trust-item"><div class="trust-n" id="tr2">48h</div><div class="trust-l" id="tr2l">متوسط التسليم</div></div>
-  <div class="trust-item"><div class="trust-n" id="tr3">100%</div><div class="trust-l" id="tr3l">شفافية في التسعير</div></div>
-  <div class="trust-item"><div class="trust-n" id="tr4">UK</div><div class="trust-l" id="tr4l">شركة مسجلة في بريطانيا</div></div>
+  <div class="trust-item"><div class="trust-n" id="tr2">48h</div><div class="trust-l" id="tr2l">سرعة تسليم</div></div>
+  <div class="trust-item"><div class="trust-n" id="tr3">100%</div><div class="trust-l" id="tr3l">ترجمة موثقة رسمياً</div></div>
+  <div class="trust-item"><div class="trust-n" id="tr4">UK</div><div class="trust-l" id="tr4l">خبرة تتجاوز ١٥ عاماً</div></div>
 </div>
 </div>
 
@@ -669,11 +473,11 @@ img, svg, video, canvas, iframe{
 <section class="srv-s" id="services">
 <div class="srv-orb srv-orb-1"></div><div class="srv-orb srv-orb-2"></div>
 <div class="si">
-  <div class="rv"><span class="tag" id="st1" style="color:var(--gd)">ما نقدّمه</span><h2 id="st2">خدمات صُمّمت للباحث، لا للسوق</h2></div>
+  <div class="rv"><span class="tag" id="st1" style="color:var(--gd)">خدماتنا</span><h2 id="st2">ترجمة معتمدة محلفة بأعلى معايير الجودة</h2></div>
   <div class="srv-g">
-    <div class="svc rv d1"><div class="svc-in"><span class="svc-num">01</span><div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M4 7h7M4 12h3m-3 5h7m6-10l-4 5 4 5M13 7l4 5-4 5"/></svg></div><h3 id="s1t">الترجمة الأكاديمية</h3><p id="s1d">نقل بين ست لغات يراعي المصطلح المتخصّص والأسلوب الأكاديمي. ليست ترجمة حرفية - بل نقل أمين للمعنى.</p><div class="svc-tags" id="s1g"><span class="svc-tag">عربي · إنجليزي · صيني</span><span class="svc-tag">ألماني · فرنسي · عبري</span></div></div></div>
-    <div class="svc rv d2"><div class="svc-in"><span class="svc-num">02</span><div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg></div><h3 id="s2t">التدقيق والمراجعة</h3><p id="s2d">مراجعة شاملة: نحو وإملاء وتنسيق واتّساق المصطلحات. نقرأ النصّ كما يقرأه المحكّم.</p><div class="svc-tags" id="s2g"><span class="svc-tag">نحو وإملاء</span><span class="svc-tag">اتّساق</span></div></div></div>
-    <div class="svc rv d3"><div class="svc-in"><span class="svc-num">03</span><div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><h3 id="s3t">صقل الأسلوب الأكاديمي</h3><p id="s3d">ترقية مستوى الكتابة دون تغيير صوت الباحث. وضوح الجمل وقوّة الحجّة وسلاسة الربط.</p><div class="svc-tags" id="s3g"><span class="svc-tag">أسلوب</span><span class="svc-tag">ترابط</span></div></div></div>
+    <div class="svc rv d1"><div class="svc-in"><span class="svc-num">01</span><div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M4 7h7M4 12h3m-3 5h7m6-10l-4 5 4 5M13 7l4 5-4 5"/></svg></div><h3 id="s1t">الترجمة المعتمدة المحلفة</h3><p id="s1d">ترجمة رسمية موثقة بختم المحلف المعتمد، مقبولة لدى جميع السفارات والجهات الحكومية والجامعات. نتعاون مع كبرى مكاتب الترجمة المعتمدة ذات الخبرة التي تتجاوز ١٥ عاماً لضمان أعلى دقة وجودة.</p><div class="svc-tags" id="s1g"><span class="svc-tag">عربي · إنجليزي · صيني</span><span class="svc-tag">ألماني · فرنسي · عبري</span></div></div></div>
+    <div class="svc rv d2"><div class="svc-in"><span class="svc-num">02</span><div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg></div><h3 id="s2t">ترجمة الوثائق الرسمية</h3><p id="s2d">ترجمة معتمدة لجميع الوثائق الرسمية: شهادات الميلاد، جوازات السفر، العقود، السجلات التجارية، التقارير الطبية، الشهادات الدراسية، وغيرها. مع ختم رسمي وتوقيع معتمد.</p><div class="svc-tags" id="s2g"><span class="svc-tag">نحو وإملاء</span><span class="svc-tag">اتّساق</span></div></div></div>
+    <div class="svc rv d3"><div class="svc-in"><span class="svc-num">03</span><div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><h3 id="s3t">الترجمة الأكاديمية والبحثية</h3><p id="s3d">ترجمة معتمدة للرسائل العلمية والأبحاث والأطروحات الجامعية. تعاون بين فريقنا الأكاديمي المتخصص ومكتب الترجمة المعتمد لإنتاج أفضل جودة بأقصى سرعة ودقة.</p><div class="svc-tags" id="s3g"><span class="svc-tag">أسلوب</span><span class="svc-tag">ترابط</span></div></div></div>
   </div>
 </div>
 </section>
@@ -681,20 +485,20 @@ img, svg, video, canvas, iframe{
 <!-- ════════ STATS ════════ -->
 <div class="stats-s rv" id="statsec"><div class="stats-g">
   <div class="stat"><div class="stat-n" data-t="6" id="sn1">0</div><div class="stat-l" id="sl1">لغات معتمدة</div></div>
-  <div class="stat"><div class="stat-n" data-t="24" id="sn2">0</div><div class="stat-l" id="sl2">ساعة متوسط التسليم</div></div>
-  <div class="stat"><div class="stat-n" data-t="100" id="sn3">0</div><div class="stat-l" id="sl3">% شفافية في التسعير</div></div>
+  <div class="stat"><div class="stat-n" data-t="24" id="sn2">0</div><div class="stat-l" id="sl2">ساعة سرعة تسليم</div></div>
+  <div class="stat"><div class="stat-n" data-t="100" id="sn3">0</div><div class="stat-l" id="sl3">% ترجمة موثقة رسمياً</div></div>
 </div></div>
 
 <!-- ════════ HOW (LIGHT) ════════ -->
 <section class="how-s" id="how">
 <div class="si">
-  <div class="rv"><span class="tag" id="ht0" style="color:var(--gd)">كيف نعمل</span><h2 id="htl" style="color:var(--tx-dk)">أربع خطوات من الملفّ إلى النتيجة</h2></div>
+  <div class="rv"><span class="tag" id="ht0" style="color:var(--gd)">خطوات طلب الترجمة المعتمدة</span><h2 id="htl" style="color:var(--tx-dk)">أربع خطوات لترجمة معتمدة موثقة</h2></div>
   <div class="tl">
     <div class="tl-line"></div>
-    <div class="tl-s rv d1"><div class="tl-dot" id="td1">١</div><div class="tl-b"><h4 id="ht1" style="color:var(--tx-dk)">أرسل ملفّك عبر واتساب</h4><p id="hd1">شارك الملفّ مع وصف مختصر: نوع العمل والموعد واللغة المطلوبة.</p></div></div>
-    <div class="tl-s rv d2"><div class="tl-dot" id="td2">٢</div><div class="tl-b"><h4 id="ht2" style="color:var(--tx-dk)">تقييم وعرض سعر شفّاف</h4><p id="hd2">نراجع الملفّ ونرسل تقديرًا واضحًا - بدون رسوم خفيّة.</p></div></div>
-    <div class="tl-s rv d3"><div class="tl-dot" id="td3">٣</div><div class="tl-b"><h4 id="ht3" style="color:var(--tx-dk)">نبدأ العمل فور موافقتك</h4><p id="hd3">تنفيذ مباشر مع تواصل مستمر بشأن أي استفسار عن المحتوى.</p></div></div>
-    <div class="tl-s rv d4"><div class="tl-dot" id="td4">٤</div><div class="tl-b"><h4 id="ht4" style="color:var(--tx-dk)">التسليم مع ملاحظات توضيحية</h4><p id="hd4">تستلم عملك منقّحًا. إذا أردت تعديلًا - نحن هنا.</p></div></div>
+    <div class="tl-s rv d1"><div class="tl-dot" id="td1">١</div><div class="tl-b"><h4 id="ht1" style="color:var(--tx-dk)">أرسل مستندك عبر واتساب</h4><p id="hd1">أرسل صورة أو ملف المستند مع ذكر اللغة المطلوبة والجهة التي ستقدم لها الترجمة (سفارة، جامعة، جهة حكومية).</p></div></div>
+    <div class="tl-s rv d2"><div class="tl-dot" id="td2">٢</div><div class="tl-b"><h4 id="ht2" style="color:var(--tx-dk)">تقييم فوري وعرض سعر</h4><p id="hd2">نراجع المستند ونحدد نوع الترجمة المطلوبة (معتمدة/محلفة/عادية) ونرسل عرض سعر واضح خلال دقائق.</p></div></div>
+    <div class="tl-s rv d3"><div class="tl-dot" id="td3">٣</div><div class="tl-b"><h4 id="ht3" style="color:var(--tx-dk)">الترجمة والتوثيق الرسمي</h4><p id="hd3">يقوم فريقنا الأكاديمي بمراجعة المصطلحات، ثم يتم الترجمة والتوثيق بالتعاون مع مكتب الترجمة المعتمد. كل مستند يمر بمراحل متعددة من المراجعة.</p></div></div>
+    <div class="tl-s rv d4"><div class="tl-dot" id="td4">٤</div><div class="tl-b"><h4 id="ht4" style="color:var(--tx-dk)">تسليم موثق مع ختم رسمي</h4><p id="hd4">تستلم الترجمة المعتمدة بختم المحلف وتوقيع رسمي، جاهزة للتقديم مباشرة. مع نسخة إلكترونية PDF ونسخة أصلية عند الطلب.</p></div></div>
   </div>
 </div>
 </section>
@@ -703,12 +507,12 @@ img, svg, video, canvas, iframe{
 <section class="why-s" id="why">
 <div class="why-orb"></div>
 <div class="si">
-  <div class="rv"><span class="tag" id="wt0" style="color:var(--gd)">لماذا تدقيق</span><h2 id="wtl">لأن النصّ الأكاديمي ليس مجرّد كلمات</h2></div>
+  <div class="rv"><span class="tag" id="wt0" style="color:var(--gd)">لماذا نحن</span><h2 id="wtl">لأن الترجمة المعتمدة تحتاج خبرة وثقة</h2></div>
   <div class="bento">
-    <div class="bc rv d1"><div class="bc-icon"><svg viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422A12 12 0 0121 17.5c-3.183 2.1-6 3.5-9 3.5s-5.817-1.4-9-3.5a12 12 0 012.84-6.922L12 14z"/></svg></div><h4 id="w1t">خبرة أكاديمية حقيقية</h4><p id="w1d">من يراجع نصّك يفهم بيئة البحث العلمي ومتطلّبات الجامعات - وليس مجرّد مدقّق لغوي.</p></div>
-    <div class="bc rv d2"><div class="bc-icon"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z"/></svg></div><h4 id="w2t">صوتك يبقى صوتك</h4><p id="w2d">لا نعيد كتابة بحثك. نحافظ على أسلوبك ونضبط ما يحتاج ضبطًا فقط.</p></div>
-    <div class="bc rv d3"><div class="bc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><h4 id="w3t">شفافيّة كاملة</h4><p id="w3d">التكلفة والموعد واضحان قبل أن تبدأ. بدون مفاجآت ولا رسوم إضافية.</p></div>
-    <div class="bc rv d4"><div class="bc-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div><h4 id="w4t">تواصل مباشر وسريع</h4><p id="w4d">واتساب فقط. لا نماذج ولا بريد مفقود. تتكلّم مع من يعمل على ملفّك مباشرةً.</p></div>
+    <div class="bc rv d1"><div class="bc-icon"><svg viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422A12 12 0 0121 17.5c-3.183 2.1-6 3.5-9 3.5s-5.817-1.4-9-3.5a12 12 0 012.84-6.922L12 14z"/></svg></div><h4 id="w1t">شراكة مع كبرى المكاتب المعتمدة</h4><p id="w1d">نتعاون مع مكاتب ترجمة معتمدة ذات خبرة تتجاوز ١٥ عاماً في الترجمة الرسمية والقانونية. هذا التعاون يضمن لك ترجمة دقيقة موثقة بختم رسمي مقبول لدى جميع الجهات.</p></div>
+    <div class="bc rv d2"><div class="bc-icon"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z"/></svg></div><h4 id="w2t">فريق أكاديمي + مترجمون معتمدون</h4><p id="w2d">يتم الترجمة والتوثيق بالتعاون بين فريقنا الأكاديمي المتخصص ومكتب الترجمة المعتمد. هذا المزيج الفريد يضمن دقة المصطلحات الأكاديمية مع الالتزام بالمعايير الرسمية للترجمة المعتمدة.</p></div>
+    <div class="bc rv d3"><div class="bc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><h4 id="w3t">سرعة فائقة وجودة لا تُضاهى</h4><p id="w3d">بفضل التعاون بين فريقنا ومكاتب الترجمة المعتمدة، نقدم أقصى سرعة في التسليم مع الحفاظ على أعلى معايير الجودة والدقة المطلوبة في الترجمة الرسمية.</p></div>
+    <div class="bc rv d4"><div class="bc-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div><h4 id="w4t">موثوقية رسمية عالمية</h4><p id="w4d">ترجماتنا تحمل ختم المحلف المعتمد وتوقيعاً رسمياً، مقبولة لدى السفارات والقنصليات والوزارات والجامعات في مصر وخارجها. وثيقة مترجمة بثقة تامة.</p></div>
   </div>
 </div>
 </section>
@@ -717,7 +521,7 @@ img, svg, video, canvas, iframe{
 <!-- ════════ SPECIALIZATIONS ════════ -->
 <section class="sec" id="specs" style="background:var(--lt);padding:100px 48px">
 <div class="si" style="max-width:1000px">
-  <div class="rv"><span class="tag" id="spctag" style="color:var(--gd)">التخصصات</span><h2 id="spctitle" style="color:var(--tx-dk)">مجالات نتقنها بعمق</h2></div>
+  <div class="rv"><span class="tag" id="spctag" style="color:var(--gd)">التخصصات</span><h2 id="spctitle" style="color:var(--tx-dk)">مجالات الترجمة المعتمدة المتخصصة</h2></div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:48px">
     <div class="rv d1" style="background:var(--wh);border:1px solid var(--bdr-lt);border-radius:16px;padding:28px 22px;transition:all .4s var(--ease)">
       <div style="font-size:14px;color:var(--gd);font-weight:700;margin-bottom:10px;font-family:var(--ui)" id="sp1h">التربية والتعليم</div>
@@ -742,23 +546,23 @@ img, svg, video, canvas, iframe{
 <!-- ════════ FAQ (LIGHT) ════════ -->
 <section class="faq-s" id="faq">
 <div class="si">
-  <div class="rv"><span class="tag" id="ft0" style="color:var(--gd)">أسئلة شائعة</span><h2 id="ftl" style="color:var(--tx-dk)">ما يسأله الطلّاب عادةً</h2></div>
+  <div class="rv"><span class="tag" id="ft0" style="color:var(--gd)">الأسئلة الشائعة</span><h2 id="ftl" style="color:var(--tx-dk)">ما يهمك معرفته عن الترجمة المعتمدة</h2></div>
   <div class="faq">
-    <div class="fi rv d1"><button class="fq" onclick="tF(this)"><span id="q1" style="color:var(--tx-dk)">هل تكتبون الأبحاث أو الرسائل بدلا عن الطالب؟</span><span class="fic">+</span></button><div class="fa"><p id="a1">لا، وهذا مبدأ أساسي عندنا. نحن نترجم ونراجع وندقق ونصقل عملا أنت من كتبه بالفعل. لا نكتب بالنيابة عن أحد ولا نقدم أي خدمة تتعارض مع الأمانة الأكاديمية. دورنا هو أن نصل بعملك إلى أفضل صورة لغوية ممكنة مع الحفاظ على صوتك كباحث.</p></div></div>
-    <div class="fi rv d2"><button class="fq" onclick="tF(this)"><span id="q2" style="color:var(--tx-dk)">كم يستغرق تسليم العمل؟</span><span class="fic">+</span></button><div class="fa"><p id="a2">التدقيق اللغوي: من 24 إلى 48 ساعة للنصوص حتى 10,000 كلمة. الترجمة الأكاديمية (عربي-إنجليزي): من 48 إلى 72 ساعة لنفس الحجم. الترجمة بلغات إضافية: من 5 إلى 7 أيام عمل. بالنسبة للرسائل الكبيرة (30,000 كلمة فأكثر) نتفق على جدول تسليم مرحلي حسب الفصول. نقدم أيضا خدمة مستعجلة خلال 24 ساعة برسوم إضافية 50%.</p></div></div>
-    <div class="fi rv d3"><button class="fq" onclick="tF(this)"><span id="q3" style="color:var(--tx-dk)">كيف أعرف تكلفة ترجمة رسالتي بالتحديد؟</span><span class="fic">+</span></button><div class="fa"><p id="a3">ببساطة: أرسل ملفك عبر واتساب وسنرد عليك بعرض سعر مفصل خلال ساعة واحدة مجانا وبدون أي التزام. السعر يعتمد على عدد الكلمات ونوع الخدمة واللغة المطلوبة. يمكنك أيضا استخدام حاسبة الأسعار في صفحة الأسعار للحصول على تقدير فوري. لا توجد رسوم مخفية ولا مفاجآت بعد الاتفاق.</p></div></div>
-    <div class="fi rv d4"><button class="fq" onclick="tF(this)"><span id="q4" style="color:var(--tx-dk)">هل تصدرون شهادة ترجمة معتمدة؟</span><span class="fic">+</span></button><div class="fa"><p id="a4">نعم. كل ترجمة أكاديمية تصدر مع شهادة رسمية تؤكد أن الترجمة أمينة ودقيقة مع ختم تدقيق الرسمي. هذه الشهادة مقبولة لدى الجامعات والمؤسسات الأكاديمية. تدقيق هي إحدى شركات BrainSync Educational Services Ltd المسجلة في المملكة المتحدة.</p></div></div>
-    <div class="fi rv"><button class="fq" onclick="tF(this)"><span id="q5" style="color:var(--tx-dk)">ماذا لو لم أكن راضيا عن النتيجة؟</span><span class="fic">+</span></button><div class="fa"><p id="a5">رضاك هو المعيار. نقدم تعديلات مجانية وغير محدودة ضمن نطاق العمل المتفق عليه. إذا وجدت أي ملاحظة على المصطلحات أو الأسلوب أو الدقة نعدلها فورا. نحن نعمل معك وليس فقط من أجلك.</p></div></div>
-    <div class="fi rv"><button class="fq" onclick="tF(this)"><span id="q6" style="color:var(--tx-dk)">هل ملفاتي وأبحاثي سرية؟</span><span class="fic">+</span></button><div class="fa"><p id="a6">بالتأكيد. جميع الملفات التي نستلمها يتم التعامل معها بسرية تامة ولا تتم مشاركتها مع أي طرف ثالث تحت أي ظرف.</p></div></div>
-    <div class="fi rv"><button class="fq" onclick="tF(this)"><span id="q7" style="color:var(--tx-dk)">ما صيغ الملفات التي تقبلونها؟</span><span class="fic">+</span></button><div class="fa"><p id="a7">نتعامل مع جميع الصيغ الشائعة: Word وPDF وLaTeX وGoogle Docs وغيرها. نسلم العمل النهائي بصيغة Word منسقة مع ملاحظات توضيحية. إذا كانت جامعتك تشترط تنسيقا معينا فأرسل لنا دليل التنسيق وسنلتزم به.</p></div></div>
-    <div class="fi rv"><button class="fq" onclick="tF(this)"><span id="q8" style="color:var(--tx-dk)">كيف أدفع؟</span><span class="fic">+</span></button><div class="fa"><p id="a8">نقبل التحويل البنكي والمحافظ الإلكترونية (فودافون كاش، إنستاباي). تحصل على عرض سعر واضح ومحدد قبل البدء ولا يتغير بعد الاتفاق.</p></div></div>
+    <div class="fi rv d1"><button class="fq" onclick="tF(this)"><span id="q1" style="color:var(--tx-dk)">ما الفرق بين الترجمة المعتمدة والترجمة العادية؟</span><span class="fic">+</span></button><div class="fa"><p id="a1">الترجمة المعتمدة هي ترجمة رسمية تحمل ختم المترجم المحلف المعتمد وتوقيعاً رسمياً، وتكون مقبولة لدى السفارات والجهات الحكومية والجامعات. أما الترجمة العادية فهي للاستخدام الشخصي ولا تحتاج توثيق رسمي. نحن نقدم النوعين حسب احتياجك.</p></div></div>
+    <div class="fi rv d2"><button class="fq" onclick="tF(this)"><span id="q2" style="color:var(--tx-dk)">كم تستغرق ترجمة مستند معتمد؟</span><span class="fic">+</span></button><div class="fa"><p id="a2">التدقيق اللغوي: من 24 إلى 48 ساعة للنصوص حتى 10,000 كلمة. الترجمة المعتمدة المحلفة (عربي-إنجليزي): من 48 إلى 72 ساعة لنفس الحجم. الترجمة بلغات إضافية: من 5 إلى 7 أيام عمل. بالنسبة للرسائل الكبيرة (30,000 كلمة فأكثر) نتفق على جدول تسليم مرحلي حسب الفصول. نقدم أيضا خدمة مستعجلة خلال 24 ساعة برسوم إضافية 50%.</p></div></div>
+    <div class="fi rv d3"><button class="fq" onclick="tF(this)"><span id="q3" style="color:var(--tx-dk)">هل الترجمة المعتمدة مقبولة في السفارات والجامعات؟</span><span class="fic">+</span></button><div class="fa"><p id="a3">نعم، بالتأكيد. ترجماتنا المعتمدة تحمل ختم المحلف المعتمد وتوقيعاً رسمياً، وهي مقبولة لدى جميع السفارات والقنصليات والوزارات والجهات الحكومية في مصر وخارجها. كما أنها مقبولة لدى الجامعات العربية والعالمية للقبول والتسجيل والمعادلات.</p></div></div>
+    <div class="fi rv d4"><button class="fq" onclick="tF(this)"><span id="q4" style="color:var(--tx-dk)">ما أنواع المستندات التي تترجمونها؟</span><span class="fic">+</span></button><div class="fa"><p id="a4">نترجم جميع أنواع المستندات: الشهادات الدراسية (بكالوريوس، ماجستير، دكتوراه)، جوازات السفر، شهادات الميلاد والزواج، السجلات التجارية، العقود القانونية، التقارير الطبية، خطابات التوصية، السير الذاتية، الأبحاث العلمية، الرسائل الجامعية، وغيرها. كلها متاحة بترجمة معتمدة محلفة.</p></div></div>
+    <div class="fi rv"><button class="fq" onclick="tF(this)"><span id="q5" style="color:var(--tx-dk)">كيف تضمنون جودة الترجمة المعتمدة؟</span><span class="fic">+</span></button><div class="fa"><p id="a5">نضمن الجودة من خلال تعاوننا مع كبرى مكاتب الترجمة المعتمدة ذات الخبرة التي تتجاوز ١٥ عاماً. كل مستند يمر بمراحل متعددة: مراجعة فريقنا الأكاديمي للمصطلحات المتخصصة، ثم الترجمة بواسطة مترجم معتمد، ثم التدقيق اللغوي، ثم التوثيق الرسمي بالختم والتوقيع. هذا النظام يضمن أعلى درجات الدقة والجودة.</p></div></div>
+    <div class="fi rv"><button class="fq" onclick="tF(this)"><span id="q6" style="color:var(--tx-dk)">هل يمكن الحصول على نسخة ورقية من الترجمة المعتمدة؟</span><span class="fic">+</span></button><div class="fa"><p id="a6">نعم، نقدم نسخة إلكترونية PDF موثقة بالختم الرقمي، ونسخة ورقية أصلية مختومة بالختم الجاف وتوقيع المحلف المعتمد عند الطلب. النسخة الورقية متاحة للاستلام من مكتب الترجمة المعتمد أو يمكن إرسالها بالبريد المسجل حسب رغبتك.</p></div></div>
+    <div class="fi rv"><button class="fq" onclick="tF(this)"><span id="q7" style="color:var(--tx-dk)">ما اللغات المتاحة للترجمة المعتمدة؟</span><span class="fic">+</span></button><div class="fa"><p id="a7">نقدم الترجمة المعتمدة بين ست لغات رئيسية: العربية، الإنجليزية، الصينية، الألمانية، الفرنسية، والعبرية. كما يمكننا التعامل مع لغات إضافية عبر شبكة مكاتب الترجمة المعتمدة الشريكة. كل الترجمات تحمل ختم المحلف المعتمد وتوقيعاً رسمياً.</p></div></div>
+    <div class="fi rv"><button class="fq" onclick="tF(this)"><span id="q8" style="color:var(--tx-dk)">كيف يمكنني طلب ترجمة معتمدة؟</span><span class="fic">+</span></button><div class="fa"><p id="a8">ببساطة: أرسل صورة المستند عبر واتساب على الرقم +44 7403 697 337 مع ذكر اللغة المطلوبة والجهة التي ستقدم لها الترجمة. سنرد عليك فوراً بتقييم المستند وعرض السعر. بعد الموافقة، نبدأ الترجمة فوراً ونسلمها في الموعد المحدد موثقة رسمياً.</p></div></div>
   </div>
 </div>
 </section>
 
 
 <!-- ════════ PRICING (DARK) ════════ -->
-<section class="price-s" id="pricing">
+<section class="price-s" id="pricing" style="display:none !important">
 <div style="position:absolute;top:-10%;left:-8%;width:45vw;max-width:450px;height:45vw;max-height:450px;border-radius:50%;background:radial-gradient(circle,var(--gd-gl),transparent 55%);filter:blur(80px);pointer-events:none"></div>
 <div class="si">
   <div class="rv"><span class="tag" id="pt0" style="color:var(--gd)">الأسعار</span><h2 id="ptl">أسعار تنافسية وشفافة</h2></div>
@@ -778,7 +582,7 @@ img, svg, video, canvas, iframe{
     </div>
     <div class="pc featured rv d2">
       <span class="pc-badge" id="pbadge">الأكثر طلبا</span>
-      <h3 id="p2t">الترجمة الأكاديمية</h3>
+      <h3 id="p2t">الترجمة المعتمدة المحلفة</h3>
       <p class="pc-desc" id="p2d">ترجمة معتمدة بين العربية والإنجليزية مع ختم رسمي</p>
       <div class="pc-price">$0.04</div>
       <span class="pc-unit" id="p2u">لكل كلمة</span>
@@ -861,10 +665,10 @@ img, svg, video, canvas, iframe{
 <!-- ════════ CTA (DARK) ════════ -->
 <section class="cta-s" id="cta-s">
 <div class="cta-orb1"></div><div class="cta-orb2"></div>
-<div class="rv"><h2 id="ct">جاهز تبدأ؟</h2></div>
-<p class="rv" id="csub" style="color:var(--tx-lt)">أرسل ملفّك الآن - تقييم مجّاني خلال ساعة</p>
-<div class="rv"><a href="#" class="wa" id="fcbtn" onclick="openOrder('trans');return false"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.913.913l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.674-.826-6.5-2.34l-.467-.39-3.65 1.223 1.223-3.65-.39-.467A9.954 9.954 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg><span id="fctxt">تواصل عبر واتساب</span></a></div>
-<div class="rv"><div class="pf"><span class="pf-l" id="pfl">الرسالة المعبّأة مسبقًا:</span><p class="pf-t" id="pft">"السلام عليكم، أريد الاستفسار عن خدمات التدقيق. لديّ [نوع العمل] بحوالي [عدد الكلمات] كلمة وأحتاج [نوع الخدمة]. شكرًا."</p></div></div>
+<div class="rv"><h2 id="ct">جاهز لترجمة معتمدة موثقة؟</h2></div>
+<p class="rv" id="csub" style="color:var(--tx-lt)">أرسل مستندك الآن - تقييم فوري وعرض سعر خلال دقائق</p>
+<div class="rv"><a href="#" class="wa" id="fcbtn" onclick="openOrder('trans');return false"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.913.913l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.674-.826-6.5-2.34l-.467-.39-3.65 1.223 1.223-3.65-.39-.467A9.954 9.954 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg><span id="fctxt">اطلب ترجمة معتمدة الآن</span></a></div>
+<div class="rv"><div class="pf"><span class="pf-l" id="pfl">رسالتك الجاهزة:</span><p class="pf-t" id="pft">"السلام عليكم، أريد طلب ترجمة معتمدة محلفة. لديّ [نوع المستند] وأحتاج ترجمة إلى [اللغة المطلوبة]. شكراً."</p></div></div>
 </section>
 
 <!-- FOOTER -->
@@ -873,13 +677,13 @@ img, svg, video, canvas, iframe{
   <div class="foot-col">
     <div class="foot-brand-lg" id="fb">تدقيق</div>
     <div class="foot-parent">A subsidiary of BrainSync Educational Services Ltd (UK)</div>
-    <p id="footdesc" style="margin-bottom:16px">خدمات الترجمة والتدقيق الأكاديمي المعتمدة. نقدم ترجمة أكاديمية احترافية بين ست لغات لطلاب الماجستير والدكتوراه.</p>
+    <p id="footdesc" style="margin-bottom:16px">خدمات الترجمة المعتمدة المحلفة. نتعاون مع كبرى مكاتب الترجمة المعتمدة ذات الخبرة التي تتجاوز ١٥ عاماً لتقديم ترجمة رسمية موثقة بأعلى معايير الجودة والدقة والسرعة.</p>
     <p style="font-size:13px;opacity:.5">Tadqiq Academic Translation & Proofreading Services</p>
   </div>
   <div class="foot-col">
     <h4 id="fnav">تصفّح</h4>
     <a href="#services" id="fn1">الخدمات</a>
-    <a href="#pricing" id="fn2">الأسعار</a>
+    <a href="#services" id="fn2">الخدمات</a>
     <a href="#how" id="fn3">آلية العمل</a>
     <a href="#faq" id="fn4">الأسئلة الشائعة</a>
     <a href="#referral" id="fn5">برنامج الإحالة</a>
@@ -887,7 +691,7 @@ img, svg, video, canvas, iframe{
   <div class="foot-col">
     <h4 id="faddr">العنوان</h4>
     <p id="faddrtxt">ميدان الشون - برج همام الإداري<br>الدور العاشر<br>المحلة الكبرى - محافظة الغربية<br>جمهورية مصر العربية</p>
-    <p style="margin-top:16px"><a href="https://wa.me/201036096589" style="color:var(--gd);font-weight:600" dir="ltr">+20 103 609 6589</a></p>
+    <p style="margin-top:16px"><a href="https://wa.me/447403697337" style="color:var(--gd);font-weight:600" dir="ltr">+44 7403 697 337</a></p>
   </div>
 </div>
 <div class="foot-bottom">
@@ -900,11 +704,11 @@ img, svg, video, canvas, iframe{
 <a href="#" class="waf" id="waf" onclick="openOrder('trans');return false"><svg width="34" height="34" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.913.913l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.674-.826-6.5-2.34l-.467-.39-3.65 1.223 1.223-3.65-.39-.467A9.954 9.954 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg></a>
 
 <!-- STICKY (MOBILE) -->
-<div class="stk" id="stk"><a href="#" id="stklnk" onclick="openOrder('trans');return false"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.913.913l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.674-.826-6.5-2.34l-.467-.39-3.65 1.223 1.223-3.65-.39-.467A9.954 9.954 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg><span id="stktxt">ابدأ الآن عبر واتساب</span></a></div>
+<div class="stk" id="stk"><a href="#" id="stklnk" onclick="openOrder('trans');return false"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.913.913l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.674-.826-6.5-2.34l-.467-.39-3.65 1.223 1.223-3.65-.39-.467A9.954 9.954 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg><span id="stktxt">اطلب ترجمة معتمدة</span></a></div>
 
 <script>
-const WN='201036096589',wl=m=>`https://wa.me/${WN}?text=${encodeURIComponent(m)}`;let CL='ar';
-let arM='السلام عليكم، أريد الاستفسار عن خدمات التدقيق. لديّ [نوع العمل] بحوالي [عدد الكلمات] كلمة وأحتاج [نوع الخدمة]. شكرًا.',enM="Hi, I'd like to inquire about your services. I have a [type of work] of about [word count] words and need [service type]. Thank you.";
+const WN='447403697337',wl=m=>`https://wa.me/${WN}?text=${encodeURIComponent(m)}`;let CL='ar';
+let arM='السلام عليكم، أريد طلب ترجمة معتمدة محلفة. لديّ [نوع المستند] وأحتاج ترجمة إلى [اللغة المطلوبة]. شكراً.',enM="Hi, I'd like to inquire about your services. I have a [type of work] of about [word count] words and need [service type]. Thank you.";
 function setWA(){const m=CL==='ar'?arM:enM,u=wl(m);['hcta','fcbtn','waf','stklnk'].forEach(i=>{const e=document.getElementById(i);if(e)e.href=u})}setWA();
 // Scroll
 window.addEventListener('scroll',()=>{const s=window.scrollY,h=document.documentElement.scrollHeight-window.innerHeight;document.getElementById('prog').style.width=(s/h*100)+'%';document.getElementById('nav').classList.toggle('sc',s>80);if(window.innerWidth<=960)document.getElementById('stk').classList.toggle('show',s>300)},{passive:true});
@@ -971,49 +775,49 @@ r3t:'Certified Partner',r3d:'5 successful referrals grant you permanent Certifie
 rht:'How it works',rs1t:'Share your link',rs1d:'Send our WhatsApp link to friends or colleagues and mention your name as referrer',
 rs2t:'Client places an order',rs2d:'When the client contacts us and mentions your name, the referral is automatically registered',
 rs3t:'Collect your commission',rs3d:'After order completion and payment, your commission is transferred within 48 hours',},
-ar:{lname:'تدقيق',lb:'EN',ml:'EN',n1:'الخدمات',n2:'اللغات',n3:'آلية العمل',n4:'لماذا تدقيق',n5:'أسئلة',m1:'الخدمات',m2:'اللغات',m3:'آلية العمل',m4:'لماذا تدقيق',m5:'أسئلة',
-hb:'ترجمة · تحرير · صقل أكاديمي',hh1:'نصّك الأكاديمي يستحقّ<br>مراجعة <em>بعين باحث</em>',hp1:'لا نكتب بالنيابة عنك - نضبط لغتك ونصقل أسلوبك ونضمن أن نصّك يقرأه الأستاذ بثقة.',hct:'ابدأ عبر واتساب',hn:'ردّ خلال ساعة · تقييم مجّاني',
+ar:{lname:'تدقيق',lb:'EN',ml:'EN',n1:'الخدمات',n2:'اللغات',n3:'آلية العمل',n4:'لماذا نحن',n5:'أسئلة',m1:'الخدمات',m2:'اللغات',m3:'آلية العمل',m4:'لماذا نحن',m5:'أسئلة',
+hb:'ترجمة معتمدة محلفة · موثقة رسمياً',hh1:'ترجمة معتمدة محلفة<br>بخبرة <em>تتجاوز ١٥ عاماً</em>',hp1:'نتعاون مع كبرى مكاتب الترجمة المعتمدة ذات الخبرة الطويلة (أكثر من ١٥ عاماً) لتقديم ترجمة موثقة رسمياً بأعلى معايير الجودة والسرعة والدقة.',hct:'اطلب ترجمة معتمدة',hn:'ردّ فوري · تقييم مجاني · شهادة ترجمة معتمدة',
 lt1:'لغات نعمل بها',lt2:'ست لغات بدقّة أكاديمية واحدة',
-st1:'ما نقدّمه',st2:'خدمات صُمّمت للباحث، لا للسوق',
-s1t:'الترجمة الأكاديمية',s1d:'نقل بين ست لغات يراعي المصطلح المتخصّص والأسلوب الأكاديمي. ليست ترجمة حرفية - بل نقل أمين للمعنى.',
-s2t:'التدقيق والمراجعة',s2d:'مراجعة شاملة: نحو وإملاء وتنسيق واتّساق المصطلحات. نقرأ النصّ كما يقرأه المحكّم.',
-s3t:'صقل الأسلوب الأكاديمي',s3d:'ترقية مستوى الكتابة دون تغيير صوت الباحث. وضوح الجمل وقوّة الحجّة وسلاسة الربط.',
-sl1:'لغات معتمدة',sl2:'ساعة متوسط التسليم',sl3:'% شفافية في التسعير',
-ht0:'كيف نعمل',htl:'أربع خطوات من الملفّ إلى النتيجة',
-ht1:'أرسل ملفّك عبر واتساب',hd1:'شارك الملفّ مع وصف مختصر: نوع العمل والموعد واللغة المطلوبة.',
-ht2:'تقييم وعرض سعر شفّاف',hd2:'نراجع الملفّ ونرسل تقديرًا واضحًا - بدون رسوم خفيّة.',
-ht3:'نبدأ العمل فور موافقتك',hd3:'تنفيذ مباشر مع تواصل مستمر بشأن أي استفسار عن المحتوى.',
-ht4:'التسليم مع ملاحظات توضيحية',hd4:'تستلم عملك منقّحًا. إذا أردت تعديلًا - نحن هنا.',
-wt0:'لماذا تدقيق',wtl:'لأن النصّ الأكاديمي ليس مجرّد كلمات',
-w1t:'خبرة أكاديمية حقيقية',w1d:'من يراجع نصّك يفهم بيئة البحث العلمي ومتطلّبات الجامعات - وليس مجرّد مدقّق لغوي.',
-w2t:'صوتك يبقى صوتك',w2d:'لا نعيد كتابة بحثك. نحافظ على أسلوبك ونضبط ما يحتاج ضبطًا فقط.',
-w3t:'شفافيّة كاملة',w3d:'التكلفة والموعد واضحان قبل أن تبدأ. بدون مفاجآت ولا رسوم إضافية.',
-w4t:'تواصل مباشر وسريع',w4d:'واتساب فقط. لا نماذج ولا بريد مفقود. تتكلّم مع من يعمل على ملفّك مباشرةً.',
-ft0:'أسئلة شائعة',ftl:'ما يسأله الطلّاب عادةً',
-q1:'هل تكتبون الأبحاث أو الرسائل بدلا عن الطالب؟',a1:'لا، وهذا مبدأ أساسي عندنا. نحن نترجم ونراجع وندقق ونصقل عملا أنت من كتبه بالفعل. لا نكتب بالنيابة عن أحد ولا نقدم أي خدمة تتعارض مع الأمانة الأكاديمية. دورنا هو أن نصل بعملك إلى أفضل صورة لغوية ممكنة مع الحفاظ على صوتك كباحث.',
-q2:'كم يستغرق تسليم العمل؟',a2:'التدقيق اللغوي: من 24 إلى 48 ساعة للنصوص حتى 10,000 كلمة. الترجمة الأكاديمية (عربي-إنجليزي): من 48 إلى 72 ساعة لنفس الحجم. الترجمة بلغات إضافية: من 5 إلى 7 أيام عمل. بالنسبة للرسائل الكبيرة (30,000 كلمة فأكثر) نتفق على جدول تسليم مرحلي حسب الفصول. نقدم أيضا خدمة مستعجلة خلال 24 ساعة برسوم إضافية 50%.',
-q3:'كيف أعرف تكلفة ترجمة رسالتي بالتحديد؟',a3:'ببساطة: أرسل ملفك عبر واتساب وسنرد عليك بعرض سعر مفصل خلال ساعة واحدة مجانا وبدون أي التزام. السعر يعتمد على عدد الكلمات ونوع الخدمة واللغة المطلوبة. يمكنك أيضا استخدام حاسبة الأسعار في صفحة الأسعار للحصول على تقدير فوري. لا توجد رسوم مخفية ولا مفاجآت بعد الاتفاق.',
-q4:'هل تصدرون شهادة ترجمة معتمدة؟',a4:'نعم. كل ترجمة أكاديمية تصدر مع شهادة رسمية تؤكد أن الترجمة أمينة ودقيقة مع ختم تدقيق الرسمي. هذه الشهادة مقبولة لدى الجامعات والمؤسسات الأكاديمية. تدقيق هي إحدى شركات BrainSync Educational Services Ltd المسجلة في المملكة المتحدة.',
-q5:'ماذا لو لم أكن راضيا عن النتيجة؟',a5:'رضاك هو المعيار. نقدم تعديلات مجانية وغير محدودة ضمن نطاق العمل المتفق عليه. إذا وجدت أي ملاحظة على المصطلحات أو الأسلوب أو الدقة نعدلها فورا. نحن نعمل معك وليس فقط من أجلك.',
-q6:'هل ملفاتي وأبحاثي سرية؟',a6:'بالتأكيد. جميع الملفات التي نستلمها يتم التعامل معها بسرية تامة ولا تتم مشاركتها مع أي طرف ثالث تحت أي ظرف.',
-q7:'ما صيغ الملفات التي تقبلونها؟',a7:'نتعامل مع جميع الصيغ الشائعة: Word وPDF وLaTeX وGoogle Docs وغيرها. نسلم العمل النهائي بصيغة Word منسقة مع ملاحظات توضيحية. إذا كانت جامعتك تشترط تنسيقا معينا فأرسل لنا دليل التنسيق وسنلتزم به.',
-q8:'كيف أدفع؟',a8:'نقبل التحويل البنكي والمحافظ الإلكترونية (فودافون كاش، إنستاباي). تحصل على عرض سعر واضح ومحدد قبل البدء ولا يتغير بعد الاتفاق.',
-ct:'جاهز تبدأ؟',csub:'أرسل ملفّك الآن - تقييم مجّاني خلال ساعة',fctxt:'تواصل عبر واتساب',
-pfl:'الرسالة المعبّأة مسبقًا:',pft:'"السلام عليكم، أريد الاستفسار عن خدمات التدقيق. لديّ [نوع العمل] بحوالي [عدد الكلمات] كلمة وأحتاج [نوع الخدمة]. شكرًا."',
-fb:'تدقيق',fs:' -  ترجمة وتحرير أكاديمي',fr:'جميع الحقوق محفوظة',stktxt:'ابدأ الآن عبر واتساب',n8:'التخصصات',m8:'التخصصات',
-spctag:'التخصصات',spctitle:'مجالات نتقنها بعمق',
+st1:'خدماتنا',st2:'ترجمة معتمدة محلفة بأعلى معايير الجودة',
+s1t:'الترجمة المعتمدة المحلفة',s1d:'ترجمة رسمية موثقة بختم المحلف المعتمد، مقبولة لدى جميع السفارات والجهات الحكومية والجامعات. نتعاون مع كبرى مكاتب الترجمة المعتمدة ذات الخبرة التي تتجاوز ١٥ عاماً لضمان أعلى دقة وجودة.',
+s2t:'ترجمة الوثائق الرسمية',s2d:'ترجمة معتمدة لجميع الوثائق الرسمية: شهادات الميلاد، جوازات السفر، العقود، السجلات التجارية، التقارير الطبية، الشهادات الدراسية، وغيرها. مع ختم رسمي وتوقيع معتمد.',
+s3t:'الترجمة الأكاديمية والبحثية',s3d:'ترجمة معتمدة للرسائل العلمية والأبحاث والأطروحات الجامعية. تعاون بين فريقنا الأكاديمي المتخصص ومكتب الترجمة المعتمد لإنتاج أفضل جودة بأقصى سرعة ودقة.',
+sl1:'لغات معتمدة',sl2:'ساعة سرعة تسليم',sl3:'% ترجمة موثقة رسمياً',
+ht0:'خطوات طلب الترجمة المعتمدة',htl:'أربع خطوات لترجمة معتمدة موثقة',
+ht1:'أرسل مستندك عبر واتساب',hd1:'أرسل صورة أو ملف المستند مع ذكر اللغة المطلوبة والجهة التي ستقدم لها الترجمة (سفارة، جامعة، جهة حكومية).',
+ht2:'تقييم فوري وعرض سعر',hd2:'نراجع المستند ونحدد نوع الترجمة المطلوبة (معتمدة/محلفة/عادية) ونرسل عرض سعر واضح خلال دقائق.',
+ht3:'الترجمة والتوثيق الرسمي',hd3:'يقوم فريقنا الأكاديمي بمراجعة المصطلحات، ثم يتم الترجمة والتوثيق بالتعاون مع مكتب الترجمة المعتمد. كل مستند يمر بمراحل متعددة من المراجعة.',
+ht4:'تسليم موثق مع ختم رسمي',hd4:'تستلم الترجمة المعتمدة بختم المحلف وتوقيع رسمي، جاهزة للتقديم مباشرة. مع نسخة إلكترونية PDF ونسخة أصلية عند الطلب.',
+wt0:'لماذا نحن',wtl:'لأن الترجمة المعتمدة تحتاج خبرة وثقة',
+w1t:'شراكة مع كبرى المكاتب المعتمدة',w1d:'نتعاون مع مكاتب ترجمة معتمدة ذات خبرة تتجاوز ١٥ عاماً في الترجمة الرسمية والقانونية. هذا التعاون يضمن لك ترجمة دقيقة موثقة بختم رسمي مقبول لدى جميع الجهات.',
+w2t:'فريق أكاديمي + مترجمون معتمدون',w2d:'يتم الترجمة والتوثيق بالتعاون بين فريقنا الأكاديمي المتخصص ومكتب الترجمة المعتمد. هذا المزيج الفريد يضمن دقة المصطلحات الأكاديمية مع الالتزام بالمعايير الرسمية للترجمة المعتمدة.',
+w3t:'سرعة فائقة وجودة لا تُضاهى',w3d:'بفضل التعاون بين فريقنا ومكاتب الترجمة المعتمدة، نقدم أقصى سرعة في التسليم مع الحفاظ على أعلى معايير الجودة والدقة المطلوبة في الترجمة الرسمية.',
+w4t:'موثوقية رسمية عالمية',w4d:'ترجماتنا تحمل ختم المحلف المعتمد وتوقيعاً رسمياً، مقبولة لدى السفارات والقنصليات والوزارات والجامعات في مصر وخارجها. وثيقة مترجمة بثقة تامة.',
+ft0:'الأسئلة الشائعة',ftl:'ما يهمك معرفته عن الترجمة المعتمدة',
+q1:'ما الفرق بين الترجمة المعتمدة والترجمة العادية؟',a1:'الترجمة المعتمدة هي ترجمة رسمية تحمل ختم المترجم المحلف المعتمد وتوقيعاً رسمياً، وتكون مقبولة لدى السفارات والجهات الحكومية والجامعات. أما الترجمة العادية فهي للاستخدام الشخصي ولا تحتاج توثيق رسمي. نحن نقدم النوعين حسب احتياجك.',
+q2:'كم تستغرق ترجمة مستند معتمد؟',a2:'التدقيق اللغوي: من 24 إلى 48 ساعة للنصوص حتى 10,000 كلمة. الترجمة المعتمدة المحلفة (عربي-إنجليزي): من 48 إلى 72 ساعة لنفس الحجم. الترجمة بلغات إضافية: من 5 إلى 7 أيام عمل. بالنسبة للرسائل الكبيرة (30,000 كلمة فأكثر) نتفق على جدول تسليم مرحلي حسب الفصول. نقدم أيضا خدمة مستعجلة خلال 24 ساعة برسوم إضافية 50%.',
+q3:'هل الترجمة المعتمدة مقبولة في السفارات والجامعات؟',a3:'نعم، بالتأكيد. ترجماتنا المعتمدة تحمل ختم المحلف المعتمد وتوقيعاً رسمياً، وهي مقبولة لدى جميع السفارات والقنصليات والوزارات والجهات الحكومية في مصر وخارجها. كما أنها مقبولة لدى الجامعات العربية والعالمية للقبول والتسجيل والمعادلات.',
+q4:'ما أنواع المستندات التي تترجمونها؟',a4:'نترجم جميع أنواع المستندات: الشهادات الدراسية (بكالوريوس، ماجستير، دكتوراه)، جوازات السفر، شهادات الميلاد والزواج، السجلات التجارية، العقود القانونية، التقارير الطبية، خطابات التوصية، السير الذاتية، الأبحاث العلمية، الرسائل الجامعية، وغيرها. كلها متاحة بترجمة معتمدة محلفة.',
+q5:'كيف تضمنون جودة الترجمة المعتمدة؟',a5:'نضمن الجودة من خلال تعاوننا مع كبرى مكاتب الترجمة المعتمدة ذات الخبرة التي تتجاوز ١٥ عاماً. كل مستند يمر بمراحل متعددة: مراجعة فريقنا الأكاديمي للمصطلحات المتخصصة، ثم الترجمة بواسطة مترجم معتمد، ثم التدقيق اللغوي، ثم التوثيق الرسمي بالختم والتوقيع. هذا النظام يضمن أعلى درجات الدقة والجودة.',
+q6:'هل يمكن الحصول على نسخة ورقية من الترجمة المعتمدة؟',a6:'نعم، نقدم نسخة إلكترونية PDF موثقة بالختم الرقمي، ونسخة ورقية أصلية مختومة بالختم الجاف وتوقيع المحلف المعتمد عند الطلب. النسخة الورقية متاحة للاستلام من مكتب الترجمة المعتمد أو يمكن إرسالها بالبريد المسجل حسب رغبتك.',
+q7:'ما اللغات المتاحة للترجمة المعتمدة؟',a7:'نقدم الترجمة المعتمدة بين ست لغات رئيسية: العربية، الإنجليزية، الصينية، الألمانية، الفرنسية، والعبرية. كما يمكننا التعامل مع لغات إضافية عبر شبكة مكاتب الترجمة المعتمدة الشريكة. كل الترجمات تحمل ختم المحلف المعتمد وتوقيعاً رسمياً.',
+q8:'كيف يمكنني طلب ترجمة معتمدة؟',a8:'ببساطة: أرسل صورة المستند عبر واتساب على الرقم +44 7403 697 337 مع ذكر اللغة المطلوبة والجهة التي ستقدم لها الترجمة. سنرد عليك فوراً بتقييم المستند وعرض السعر. بعد الموافقة، نبدأ الترجمة فوراً ونسلمها في الموعد المحدد موثقة رسمياً.',
+ct:'جاهز لترجمة معتمدة موثقة؟',csub:'أرسل مستندك الآن - تقييم فوري وعرض سعر خلال دقائق',fctxt:'اطلب ترجمة معتمدة الآن',
+pfl:'رسالتك الجاهزة:',pft:'"السلام عليكم، أريد طلب ترجمة معتمدة محلفة. لديّ [نوع المستند] وأحتاج ترجمة إلى [اللغة المطلوبة]. شكراً."',
+fb:'تدقيق',fs:' -  ترجمة وتحرير أكاديمي',fr:'جميع الحقوق محفوظة',stktxt:'اطلب ترجمة معتمدة',n8:'التخصصات',m8:'التخصصات',
+spctag:'التخصصات',spctitle:'مجالات الترجمة المعتمدة المتخصصة',
 sp1h:'التربية والتعليم',sp1d:'فلسفة التربية، المناهج وطرق التدريس، الإدارة التعليمية، تكنولوجيا التعليم، التعليم العالي',
 sp2h:'العلوم الإدارية',sp2d:'إدارة الأعمال، الموارد البشرية، إدارة المشاريع، التسويق، الإدارة المالية، الإدارة العامة',
 sp3h:'الدراسات الشرعية',sp3d:'الفقه الإسلامي، أصول الفقه، القضاء والسياسة الشرعية، الاقتصاد الإسلامي، الدراسات القرآنية',
-sp4h:'العلوم الإنسانية',sp4d:'علم الاجتماع، علم النفس، العلوم السياسية، الإعلام والاتصال، اللغة العربية وآدابها',rcTitle:'حاسبة أرباح الإحالة',rcSub:'أدخل عدد الكلمات في المشروع الذي تحيله لمعرفة أرباحك المتوقعة',rcL1:'إحالة واحدة',rcL2:'3+ إحالات',rcL3:'شريك معتمد',tr1l:'لغات معتمدة',tr2l:'متوسط التسليم',tr3l:'شفافية في التسعير',tr4l:'شركة مسجلة في بريطانيا',
-footdesc:'خدمات الترجمة والتدقيق الأكاديمي المعتمدة. نقدم ترجمة أكاديمية احترافية بين ست لغات لطلاب الماجستير والدكتوراه.',
+sp4h:'العلوم الإنسانية',sp4d:'علم الاجتماع، علم النفس، العلوم السياسية، الإعلام والاتصال، اللغة العربية وآدابها',rcTitle:'حاسبة أرباح الإحالة',rcSub:'أدخل عدد الكلمات في المشروع الذي تحيله لمعرفة أرباحك المتوقعة',rcL1:'إحالة واحدة',rcL2:'3+ إحالات',rcL3:'شريك معتمد',tr1l:'لغات معتمدة',tr2l:'سرعة تسليم',tr3l:'ترجمة موثقة رسمياً',tr4l:'خبرة تتجاوز ١٥ عاماً',
+footdesc:'خدمات الترجمة المعتمدة المحلفة. نتعاون مع كبرى مكاتب الترجمة المعتمدة ذات الخبرة التي تتجاوز ١٥ عاماً لتقديم ترجمة رسمية موثقة بأعلى معايير الجودة والدقة والسرعة.',
 fnav:'تصفّح',fn1:'الخدمات',fn2:'الأسعار',fn3:'آلية العمل',fn4:'الأسئلة الشائعة',fn5:'برنامج الإحالة',
 faddr:'العنوان',faddrtxt:'ميدان الشون - برج همام الإداري<br>الدور العاشر<br>المحلة الكبرى - محافظة الغربية<br>جمهورية مصر العربية',
 rgt:'انشئ رابط الإحالة الخاص بك',refGenBtn:'انشئ الرابط',refNote:'شارك هذا الرابط مع أصدقائك. عندما يطلب أي شخص عبر هذا الرابط، ستحصل على عمولتك تلقائيا.',n6:'الأسعار',n7:'الإحالة',m6:'الأسعار',m7:'الإحالة',
 pt0:'الأسعار',ptl:'أسعار تنافسية وشفافة',
 p1t:'التدقيق اللغوي',p1d:'مراجعة نحوية وإملائية شاملة مع ضبط المصطلحات',p1u:'لكل كلمة',
 p1f1:'تدقيق نحوي وإملائي',p1f2:'اتّساق المصطلحات',p1f3:'ملاحظات توضيحية',p1f4:'تعديلات مجانية',p1btn:'اطلب الآن',
-pbadge:'الأكثر طلبا',p2t:'الترجمة الأكاديمية',p2d:'ترجمة معتمدة بين العربية والإنجليزية مع ختم رسمي',p2u:'لكل كلمة',
+pbadge:'الأكثر طلبا',p2t:'الترجمة المعتمدة المحلفة',p2d:'ترجمة معتمدة بين العربية والإنجليزية مع ختم رسمي',p2u:'لكل كلمة',
 p2f1:'ترجمة أكاديمية معتمدة',p2f2:'مراجعة المصطلحات التخصصية',p2f3:'ختم وشهادة ترجمة',p2f4:'تسليم خلال 48-72 ساعة',p2f5:'تعديلات مجانية ضمن النطاق',p2btn:'اطلب الآن',
 p3t:'لغات إضافية',p3d:'صيني - ألماني - فرنسي - عبري مع ضبط أكاديمي',p3u:'لكل كلمة',
 p3f1:'ترجمة من وإلى 6 لغات',p3f2:'مترجمون متخصصون أكاديميا',p3f3:'ختم وشهادة ترجمة',p3f4:'تسليم خلال 5-7 أيام',p3btn:'اطلب الآن',
@@ -1043,21 +847,21 @@ let currentService = 'trans';
 let countMode = 'words';
 const RATES = { proof: 0.02, trans: 0.04, extra: 0.06 };
 const SVC_NAMES = {
-  ar: { proof: 'التدقيق اللغوي', trans: 'الترجمة الأكاديمية (عربي-إنجليزي)', extra: 'ترجمة لغات إضافية' },
+  ar: { proof: 'التدقيق اللغوي', trans: 'الترجمة المعتمدة المحلفة (عربي-إنجليزي)', extra: 'ترجمة معتمدة بلغات إضافية' },
   en: { proof: 'Proofreading', trans: 'Academic Translation (AR-EN)', extra: 'Additional Languages Translation' }
 };
 
 function openOrder(svc) {
   currentService = svc;
   const isAr = CL === 'ar';
-  document.getElementById('modalTitle').textContent = isAr ? 'طلب خدمة' : 'Order Service';
+  document.getElementById('modalTitle').textContent = isAr ? 'طلب ترجمة معتمدة' : 'Order Service';
   document.getElementById('modalService').textContent = SVC_NAMES[CL][svc];
-  document.getElementById('modalCountLabel').textContent = isAr ? 'حدد حجم العمل' : 'Specify document size';
+  document.getElementById('modalCountLabel').textContent = isAr ? 'حدد عدد صفحات المستند' : 'Specify document size';
   document.getElementById('togWords').textContent = isAr ? 'كلمات' : 'Words';
   document.getElementById('togPages').textContent = isAr ? 'صفحات (250 كلمة)' : 'Pages (250 words)';
   document.getElementById('modalHint').textContent = isAr ? 'كلمة' : 'words';
-  document.getElementById('modalEstLabel').textContent = isAr ? 'التكلفة التقديرية' : 'Estimated cost';
-  document.getElementById('modalWaText').textContent = isAr ? 'إرسال الطلب عبر واتساب' : 'Send order via WhatsApp';
+  document.getElementById('modalEstLabel').textContent = isAr ? 'التكلفة التقديرية (شاملة التوثيق)' : 'Estimated cost';
+  document.getElementById('modalWaText').textContent = isAr ? 'إرسال طلب الترجمة المعتمدة' : 'Send order via WhatsApp';
   document.getElementById('modalCount').value = '';
   document.getElementById('modalPrice').textContent = '$0';
   countMode = 'words';
@@ -1120,10 +924,10 @@ function sendOrder() {
   let msg;
   if (isAr) {
     msg = 'السلام عليكم،\n'
-      + 'أريد طلب خدمة: ' + svcName + '\n'
+      + 'أريد طلب ترجمة معتمدة: ' + svcName + '\n'
       + 'عدد الكلمات: ' + words.toLocaleString() + ' كلمة'
       + (countMode === 'pages' ? ' (' + count + ' صفحة)' : '') + '\n'
-      + 'التكلفة التقديرية: $' + est + '\n'
+      + 'التكلفة التقديرية (شاملة التوثيق): $' + est + '\n'
       + 'أرجو التأكيد والبدء. شكراً.'
       + refPart;
   } else {
