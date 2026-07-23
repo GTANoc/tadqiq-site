@@ -533,7 +533,6 @@
     </div>
 </section>
 
-<!-- ===== قسم الأسعار ===== -->
 <section id="pricing" class="pr-bg">
     <div class="container">
         <div class="s-hd rv">
@@ -543,7 +542,6 @@
             <div class="s-ln"></div>
         </div>
         <div class="pr-g">
-            <!-- الشريحة الأولى -->
             <div class="pr-c rv">
                 <div class="pr-ti"><strong>حتى 10</strong> صفحات</div>
                 <div class="pr-vl"><span class="pr-am">٥٠ <span class="pr-un">ريال / صفحة</span></span></div>
@@ -556,7 +554,6 @@
                 </ul>
                 <button class="pr-bt" onclick="openMo('حتى 10 صفحات')">اطلب ترجمتك</button>
             </div>
-            <!-- الشريحة الثانية -->
             <div class="pr-c hl rv">
                 <span class="hl-tg">الأكثر اختياراً</span>
                 <div class="pr-ti"><strong>أكثر من 10</strong> صفحات</div>
@@ -570,7 +567,6 @@
                 </ul>
                 <button class="pr-bt sol" onclick="openMo('أكثر من 10 صفحات')">اطلب ترجمتك</button>
             </div>
-            <!-- الشريحة الثالثة -->
             <div class="pr-c rv">
                 <div class="pr-ti"><strong>أكثر من 100</strong> صفحة</div>
                 <div class="pr-vl"><span class="pr-am">٣٥ <span class="pr-un">ريال / صفحة</span></span></div>
@@ -585,12 +581,10 @@
             </div>
         </div>
 
-        <!-- ملاحظة اللغات -->
         <div class="pr-note rv">
             <p><i class="fas fa-info-circle"></i> الأسعار المعروضة للترجمة <strong>من العربية إلى الإنجليزية والعكس</strong>. أما بقية اللغات (الفرنسية، الألمانية، العبرية) فقد تختلف أسعارها قليلاً — تواصل معنا لمعرفة السعر الدقيق.</p>
         </div>
 
-        <!-- حاسبة التكلفة -->
         <div class="calc rv">
             <h3><i class="fas fa-calculator" style="color:var(--accent);margin-left:8px"></i>احسب تكلفة ترجمتك</h3>
             <div class="calc-r">
@@ -667,7 +661,7 @@
             </div>
             <div class="faq-it rv">
                 <button class="faq-q" onclick="tgFaq(this)">ما هي طرق الدفع المتاحة؟<i class="fas fa-chevron-down"></i></button>
-                <div class="faq-a"><div class="faq-ai">نقبل التحويل البنكي وSTC Pay ومدى وApple Pay. يتم إرسال تفاصيل الدفع بعد تأكيد الطلب والسعر.</div></div>
+                <div class="faq-a"><div class="faq-ai">نوفر وسائل دفع مرنة تناسب الجميع: تحويل بنكي، تطبيق برق، تحويل الراجحي، STC Pay، عملات مشفرة، بنوك إلكترونية، وغيرها من الوسائل. يتم إرسال تفاصيل الدفع المناسبة لك بعد تأكيد الطلب والسعر.</div></div>
             </div>
             <div class="faq-it rv">
                 <button class="faq-q" onclick="tgFaq(this)">كم يستغرق تسليم الترجمة؟<i class="fas fa-chevron-down"></i></button>
@@ -729,7 +723,6 @@
     </div>
 </footer>
 
-<!-- Modal -->
 <div class="mo-ov" id="moOv" onclick="if(event.target===this)closeMo()">
     <div class="mo">
         <div class="mo-top">
@@ -781,22 +774,17 @@
     </div>
 </div>
 
-<!-- Toast -->
 <div class="tst" id="tst"><i class="fas fa-check-circle"></i><span id="tstTx"></span></div>
 
 <script>
-// Navbar scroll
 window.addEventListener('scroll',function(){
     document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>40);
 });
-
-// Reveal on scroll
 var rvObs=new IntersectionObserver(function(entries){
     entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vs');rvObs.unobserve(e.target)}});
 },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.rv').forEach(function(el){rvObs.observe(el)});
 
-// Demo slider
 var demoLabels=[
     '<strong>English</strong> ← <strong>العربية</strong>',
     '<strong>Français</strong> ← <strong>English</strong>',
@@ -817,15 +805,12 @@ dT=setInterval(nextDemo,3500);
 document.querySelector('.demo-h').addEventListener('mouseenter',function(){clearInterval(dT)});
 document.querySelector('.demo-h').addEventListener('mouseleave',function(){dT=setInterval(nextDemo,3500)});
 
-// FAQ toggle
 function tgFaq(btn){
     var it=btn.parentElement;
     var wasOpen=it.classList.contains('op');
     document.querySelectorAll('.faq-it').forEach(function(f){f.classList.remove('op')});
     if(!wasOpen) it.classList.add('op');
 }
-
-// Modal
 function openMo(tier){
     document.getElementById('moTier').value=tier+' — الترجمة المعتمدة';
     document.getElementById('moOv').classList.add('on');
@@ -841,28 +826,20 @@ function subMo(e){
     showTst('تم إرسال طلبك بنجاح! سنتواصل معك قريباً');
     e.target.reset();
 }
-
-// Toast
 function showTst(txt){
     var t=document.getElementById('tst');
     document.getElementById('tstTx').textContent=txt;
     t.classList.add('sh');
     setTimeout(function(){t.classList.remove('sh')},3500);
 }
-
-// حاسبة التكلفة
 function calcCost(){
     var n=parseInt(document.getElementById('pgC').value);
     var r=document.getElementById('calcR');
     if(!n||n<1){r.innerHTML='<span style="color:var(--rose)">يرجى إدخال عدد صفحات صحيح</span>';return}
     var pp, tier;
-    if(n>100){
-        pp=35; tier='أكثر من 100 صفحة';
-    }else if(n>10){
-        pp=45; tier='أكثر من 10 صفحات';
-    }else{
-        pp=50; tier='حتى 10 صفحات';
-    }
+    if(n>100){pp=35;tier='أكثر من 100 صفحة'}
+    else if(n>10){pp=45;tier='أكثر من 10 صفحات'}
+    else{pp=50;tier='حتى 10 صفحات'}
     var total=n*pp;
     r.innerHTML='الشريحة: <strong>'+tier+'</strong> — السعر لكل صفحة: <strong>'+pp+' ريال</strong><br>التكلفة الإجمالية: <strong>'+total.toLocaleString('ar-SA')+' ريال سعودي</strong><br><span style="font-size:11px;color:var(--fg-dim);margin-top:4px;display:inline-block">* السعر للترجمة بين العربية والإنجليزية</span>';
 }
