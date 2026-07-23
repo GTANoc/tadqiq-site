@@ -353,6 +353,12 @@ a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer}
 @keyframes wp{0%,100%{box-shadow:0 10px 40px rgba(37,211,102,.25)}50%{box-shadow:0 10px 56px rgba(37,211,102,.4)}}
 @keyframes spin{to{--angle:360deg}}
 @property --angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+/* Phone number fix */
+.phone-num, a[href^="tel:"], a[href^="https://wa.me/"] {
+  direction: ltr !important;
+  unicode-bidi: embed;
+  display: inline-block;
+}
 </style>
 </head>
 <body>
@@ -555,7 +561,7 @@ a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer}
     <div class="fi rv"><button class="fq" onclick="tF(this)"><span id="q5" style="color:var(--tx-dk)">كيف تضمنون جودة الترجمة المعتمدة؟</span><span class="fic">+</span></button><div class="fa"><p id="a5">نضمن الجودة من خلال تعاوننا مع كبرى مكاتب الترجمة المعتمدة ذات الخبرة التي تتجاوز ١٥ عاماً. كل مستند يمر بمراحل متعددة: مراجعة فريقنا الأكاديمي للمصطلحات المتخصصة، ثم الترجمة بواسطة مترجم معتمد، ثم التدقيق اللغوي، ثم التوثيق الرسمي بالختم والتوقيع. هذا النظام يضمن أعلى درجات الدقة والجودة.</p></div></div>
     <div class="fi rv"><button class="fq" onclick="tF(this)"><span id="q6" style="color:var(--tx-dk)">هل يمكن الحصول على نسخة ورقية من الترجمة المعتمدة؟</span><span class="fic">+</span></button><div class="fa"><p id="a6">نعم، نقدم نسخة إلكترونية PDF موثقة بالختم الرقمي، ونسخة ورقية أصلية مختومة بالختم الجاف وتوقيع المحلف المعتمد عند الطلب. النسخة الورقية متاحة للاستلام من مكتب الترجمة المعتمد أو يمكن إرسالها بالبريد المسجل حسب رغبتك.</p></div></div>
     <div class="fi rv"><button class="fq" onclick="tF(this)"><span id="q7" style="color:var(--tx-dk)">ما اللغات المتاحة للترجمة المعتمدة؟</span><span class="fic">+</span></button><div class="fa"><p id="a7">نقدم الترجمة المعتمدة بين ست لغات رئيسية: العربية، الإنجليزية، الصينية، الألمانية، الفرنسية، والعبرية. كما يمكننا التعامل مع لغات إضافية عبر شبكة مكاتب الترجمة المعتمدة الشريكة. كل الترجمات تحمل ختم المحلف المعتمد وتوقيعاً رسمياً.</p></div></div>
-    <div class="fi rv"><button class="fq" onclick="tF(this)"><span id="q8" style="color:var(--tx-dk)">كيف يمكنني طلب ترجمة معتمدة؟</span><span class="fic">+</span></button><div class="fa"><p id="a8">ببساطة: أرسل صورة المستند عبر واتساب على الرقم +44 7403 697 337 مع ذكر اللغة المطلوبة والجهة التي ستقدم لها الترجمة. سنرد عليك فوراً بتقييم المستند وعرض السعر. بعد الموافقة، نبدأ الترجمة فوراً ونسلمها في الموعد المحدد موثقة رسمياً.</p></div></div>
+    <div class="fi rv"><button class="fq" onclick="tF(this)"><span id="q8" style="color:var(--tx-dk)">كيف يمكنني طلب ترجمة معتمدة؟</span><span class="fic">+</span></button><div class="fa"><p id="a8">ببساطة: أرسل صورة المستند عبر واتساب على الرقم <span dir="ltr">+44 7403 697 337</span> مع ذكر اللغة المطلوبة والجهة التي ستقدم لها الترجمة. سنرد عليك فوراً بتقييم المستند وعرض السعر. بعد الموافقة، نبدأ الترجمة فوراً ونسلمها في الموعد المحدد موثقة رسمياً.</p></div></div>
   </div>
 </div>
 </section>
@@ -691,7 +697,7 @@ a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer}
   <div class="foot-col">
     <h4 id="faddr">العنوان</h4>
     <p id="faddrtxt">ميدان الشون - برج همام الإداري<br>الدور العاشر<br>المحلة الكبرى - محافظة الغربية<br>جمهورية مصر العربية</p>
-    <p style="margin-top:16px"><a href="https://wa.me/447403697337" style="color:var(--gd);font-weight:600" dir="ltr">+44 7403 697 337</a></p>
+    <p style="margin-top:16px"><a href="https://wa.me/447403697337" style="color:var(--gd);font-weight:600;direction:ltr;unicode-bidi:embed" dir="ltr">+44 7403 697 337</a></p>
   </div>
 </div>
 <div class="foot-bottom">
@@ -708,7 +714,7 @@ a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer}
 
 <script>
 const WN='447403697337',wl=m=>`https://wa.me/${WN}?text=${encodeURIComponent(m)}`;let CL='ar';
-let arM='السلام عليكم، أريد طلب ترجمة معتمدة محلفة. لديّ [نوع المستند] وأحتاج ترجمة إلى [اللغة المطلوبة]. شكراً.',enM="Hi, I'd like to inquire about your services. I have a [type of work] of about [word count] words and need [service type]. Thank you.";
+let arM='السلام عليكم، أريد طلب ترجمة معتمدة محلفة. لديّ [نوع المستند] وأحتاج ترجمة إلى [اللغة المطلوبة] للتقديم لـ [الجهة المقصودة]. شكراً.',enM="Hi, I'd like to inquire about your services. I have a [type of work] of about [word count] words and need [service type]. Thank you.";
 function setWA(){const m=CL==='ar'?arM:enM,u=wl(m);['hcta','fcbtn','waf','stklnk'].forEach(i=>{const e=document.getElementById(i);if(e)e.href=u})}setWA();
 // Scroll
 window.addEventListener('scroll',()=>{const s=window.scrollY,h=document.documentElement.scrollHeight-window.innerHeight;document.getElementById('prog').style.width=(s/h*100)+'%';document.getElementById('nav').classList.toggle('sc',s>80);if(window.innerWidth<=960)document.getElementById('stk').classList.toggle('show',s>300)},{passive:true});
@@ -801,7 +807,7 @@ q4:'ما أنواع المستندات التي تترجمونها؟',a4:'نتر
 q5:'كيف تضمنون جودة الترجمة المعتمدة؟',a5:'نضمن الجودة من خلال تعاوننا مع كبرى مكاتب الترجمة المعتمدة ذات الخبرة التي تتجاوز ١٥ عاماً. كل مستند يمر بمراحل متعددة: مراجعة فريقنا الأكاديمي للمصطلحات المتخصصة، ثم الترجمة بواسطة مترجم معتمد، ثم التدقيق اللغوي، ثم التوثيق الرسمي بالختم والتوقيع. هذا النظام يضمن أعلى درجات الدقة والجودة.',
 q6:'هل يمكن الحصول على نسخة ورقية من الترجمة المعتمدة؟',a6:'نعم، نقدم نسخة إلكترونية PDF موثقة بالختم الرقمي، ونسخة ورقية أصلية مختومة بالختم الجاف وتوقيع المحلف المعتمد عند الطلب. النسخة الورقية متاحة للاستلام من مكتب الترجمة المعتمد أو يمكن إرسالها بالبريد المسجل حسب رغبتك.',
 q7:'ما اللغات المتاحة للترجمة المعتمدة؟',a7:'نقدم الترجمة المعتمدة بين ست لغات رئيسية: العربية، الإنجليزية، الصينية، الألمانية، الفرنسية، والعبرية. كما يمكننا التعامل مع لغات إضافية عبر شبكة مكاتب الترجمة المعتمدة الشريكة. كل الترجمات تحمل ختم المحلف المعتمد وتوقيعاً رسمياً.',
-q8:'كيف يمكنني طلب ترجمة معتمدة؟',a8:'ببساطة: أرسل صورة المستند عبر واتساب على الرقم +44 7403 697 337 مع ذكر اللغة المطلوبة والجهة التي ستقدم لها الترجمة. سنرد عليك فوراً بتقييم المستند وعرض السعر. بعد الموافقة، نبدأ الترجمة فوراً ونسلمها في الموعد المحدد موثقة رسمياً.',
+q8:'كيف يمكنني طلب ترجمة معتمدة؟',a8:'ببساطة: أرسل صورة المستند عبر واتساب على الرقم <span dir="ltr">+44 7403 697 337</span> مع ذكر اللغة المطلوبة والجهة التي ستقدم لها الترجمة. سنرد عليك فوراً بتقييم المستند وعرض السعر. بعد الموافقة، نبدأ الترجمة فوراً ونسلمها في الموعد المحدد موثقة رسمياً.',
 ct:'جاهز لترجمة معتمدة موثقة؟',csub:'أرسل مستندك الآن - تقييم فوري وعرض سعر خلال دقائق',fctxt:'اطلب ترجمة معتمدة الآن',
 pfl:'رسالتك الجاهزة:',pft:'"السلام عليكم، أريد طلب ترجمة معتمدة محلفة. لديّ [نوع المستند] وأحتاج ترجمة إلى [اللغة المطلوبة]. شكراً."',
 fb:'تدقيق',fs:' -  ترجمة وتحرير أكاديمي',fr:'جميع الحقوق محفوظة',stktxt:'اطلب ترجمة معتمدة',n8:'التخصصات',m8:'التخصصات',
