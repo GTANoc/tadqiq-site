@@ -209,6 +209,11 @@
         .pr-bt.sol{background:linear-gradient(135deg,var(--accent),var(--accent-lo));color:var(--bg);border-color:var(--accent);box-shadow:0 2px 14px rgba(201,168,76,0.2)}
         .pr-bt.sol:hover{box-shadow:0 4px 22px rgba(201,168,76,0.35);transform:translateY(-1px)}
 
+        .pr-note{text-align:center;margin-top:20px;overflow:hidden}
+        .pr-note p{display:inline-flex;align-items:center;gap:8px;background:var(--accent-bg);border:1px solid rgba(201,168,76,0.12);padding:10px 22px;border-radius:50px;font-size:12.5px;color:var(--fg-mid);font-weight:500;line-height:1.7}
+        .pr-note i{color:var(--accent);font-size:13px;flex-shrink:0}
+        .pr-note strong{color:var(--fg-sec)}
+
         .calc{max-width:460px;margin:44px auto 0;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:26px 28px;overflow:hidden}
         .calc h3{font-family:'Noto Kufi Arabic';font-size:15px;font-weight:700;margin-bottom:16px;text-align:center}
         .calc-r{display:flex;align-items:center;gap:10px;justify-content:center;flex-wrap:wrap}
@@ -240,7 +245,7 @@
         .faq-it.op .faq-q i{transform:rotate(180deg)}
         .faq-it.op .faq-q{color:var(--accent)}
         .faq-a{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.16,1,.3,1)}
-        .faq-it.op .faq-a{max-height:300px}
+        .faq-it.op .faq-a{max-height:400px}
         .faq-ai{padding-bottom:18px;font-size:13.5px;color:var(--fg-mid);line-height:1.9;overflow:hidden}
 
         .cta-bx{max-width:620px;margin:0 auto;background:linear-gradient(135deg,var(--accent-lo),var(--accent));border-radius:var(--radius-lg);padding:48px 40px;text-align:center;position:relative;overflow:hidden}
@@ -313,6 +318,7 @@
             .trust-i{gap:18px}
             .mo{padding:22px}
             .cta-bx{padding:36px 22px}
+            .pr-note p{flex-direction:column;text-align:center;gap:4px}
         }
         @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
         ::-webkit-scrollbar{width:6px}
@@ -527,18 +533,20 @@
     </div>
 </section>
 
+<!-- ===== قسم الأسعار ===== -->
 <section id="pricing" class="pr-bg">
     <div class="container">
         <div class="s-hd rv">
             <span class="s-eb">الأسعار</span>
             <h2 class="s-ti">أسعار واضحة حسب عدد الصفحات</h2>
-            <p class="s-de">السعر موحد لجميع الاتجاهات اللغوية. يحدد حسب حجم ملفك ونوع الاعتماد المطلوب.</p>
+            <p class="s-de">الأسعار بالريال السعودي للترجمة بين العربية والإنجليزية. باقي اللغات قد تختلف قليلاً.</p>
             <div class="s-ln"></div>
         </div>
         <div class="pr-g">
+            <!-- الشريحة الأولى -->
             <div class="pr-c rv">
-                <div class="pr-ti"><strong>1 – 10</strong> صفحة</div>
-                <div class="pr-vl"><span class="pr-am"><span class="pr-cu">$</span>25 <span class="pr-un">/ صفحة</span></span></div>
+                <div class="pr-ti"><strong>حتى 10</strong> صفحات</div>
+                <div class="pr-vl"><span class="pr-am">٥٠ <span class="pr-un">ريال / صفحة</span></span></div>
                 <ul class="pr-fl">
                     <li><i class="fas fa-check"></i> مترجم معتمد من تخصصك</li>
                     <li><i class="fas fa-check"></i> تدقيق مزدوج أكاديمي</li>
@@ -546,40 +554,47 @@
                     <li><i class="fas fa-check"></i> ختم الاعتماد الرسمي</li>
                     <li><i class="fas fa-check"></i> تسليم خلال 24–48 ساعة</li>
                 </ul>
-                <button class="pr-bt" onclick="openMo('1–10 صفحات')">اطلب ترجمتك</button>
+                <button class="pr-bt" onclick="openMo('حتى 10 صفحات')">اطلب ترجمتك</button>
             </div>
+            <!-- الشريحة الثانية -->
             <div class="pr-c hl rv">
                 <span class="hl-tg">الأكثر اختياراً</span>
-                <div class="pr-ti"><strong>11 – 100</strong> صفحة</div>
-                <div class="pr-vl"><span class="pr-am"><span class="pr-cu">$</span>20 <span class="pr-un">/ صفحة</span></span></div>
-                <div class="pr-sv">توفير 20% عن الشريحة الأولى</div>
+                <div class="pr-ti"><strong>أكثر من 10</strong> صفحات</div>
+                <div class="pr-vl"><span class="pr-am">٤٥ <span class="pr-un">ريال / صفحة</span></span></div>
+                <div class="pr-sv">توفير 10% عن الشريحة الأساسية</div>
                 <ul class="pr-fl">
                     <li><i class="fas fa-check"></i> كل مميزات الشريحة الأساسية</li>
                     <li><i class="fas fa-check"></i> مراجعة من خبير أكاديمي إضافي</li>
                     <li><i class="fas fa-check"></i> أولوية في التسليم</li>
                     <li><i class="fas fa-check"></i> شهادة جودة مفصلة</li>
-                    <li><i class="fas fa-check"></i> خيار التحويف الإضافي</li>
                 </ul>
-                <button class="pr-bt sol" onclick="openMo('11–100 صفحات')">اطلب ترجمتك</button>
+                <button class="pr-bt sol" onclick="openMo('أكثر من 10 صفحات')">اطلب ترجمتك</button>
             </div>
+            <!-- الشريحة الثالثة -->
             <div class="pr-c rv">
-                <div class="pr-ti"><strong>100+</strong> صفحة</div>
-                <div class="pr-vl"><span class="pr-am"><span class="pr-cu">$</span>15 <span class="pr-un">/ صفحة</span></span></div>
-                <div class="pr-sv">توفير 40% عن الشريحة الأولى</div>
+                <div class="pr-ti"><strong>أكثر من 100</strong> صفحة</div>
+                <div class="pr-vl"><span class="pr-am">٣٥ <span class="pr-un">ريال / صفحة</span></span></div>
+                <div class="pr-sv">توفير 30% عن الشريحة الأساسية</div>
                 <ul class="pr-fl">
                     <li><i class="fas fa-check"></i> كل مميزات الشريحة المتوسطة</li>
                     <li><i class="fas fa-check"></i> مدير مشروع مخصص</li>
                     <li><i class="fas fa-check"></i> جدول زمني مرن</li>
                     <li><i class="fas fa-check"></i> تسليم على مراحل معتمدة</li>
-                    <li><i class="fas fa-check"></i> تعاون مع مكتب شريك معتمد</li>
                 </ul>
-                <button class="pr-bt" onclick="openMo('100+ صفحات')">اطلب ترجمتك</button>
+                <button class="pr-bt" onclick="openMo('أكثر من 100 صفحات')">اطلب ترجمتك</button>
             </div>
         </div>
+
+        <!-- ملاحظة اللغات -->
+        <div class="pr-note rv">
+            <p><i class="fas fa-info-circle"></i> الأسعار المعروضة للترجمة <strong>من العربية إلى الإنجليزية والعكس</strong>. أما بقية اللغات (الفرنسية، الألمانية، العبرية) فقد تختلف أسعارها قليلاً — تواصل معنا لمعرفة السعر الدقيق.</p>
+        </div>
+
+        <!-- حاسبة التكلفة -->
         <div class="calc rv">
             <h3><i class="fas fa-calculator" style="color:var(--accent);margin-left:8px"></i>احسب تكلفة ترجمتك</h3>
             <div class="calc-r">
-                <input type="number" id="pgC" class="calc-in" min="1" max="500" value="40">
+                <input type="number" id="pgC" class="calc-in" min="1" max="5000" value="40">
                 <span style="color:var(--fg-dim);font-size:13px">صفحة</span>
                 <button class="calc-bt" onclick="calcCost()">احسب السعر</button>
             </div>
@@ -615,10 +630,10 @@
             </div>
             <div class="tt-c rv">
                 <div class="tt-st"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p class="tt-tx">طلبت ترجمة معتمدة من الإنجليزية إلى العربية لرسالة الدكتوراه في القانون الدولي. الملف وصل بختم الاعتماد وكان مقبولاً فوراً من القسم.</p>
+                <p class="tt-tx">رسالة الدكتوراه من العبرية إلى العربية كانت تحدياً كبيراً. الفريق في تدقيق تعامل معها باحترافية عالية والمصطلحات التوراتية دقيقة جداً.</p>
                 <div class="tt-au">
-                    <div class="tt-av">ع.ف</div>
-                    <div><div class="tt-nm">ع.ف</div><div class="tt-rl">دكتوراه قانون دولي — جامعة لندن</div></div>
+                    <div class="tt-av">ر.م</div>
+                    <div><div class="tt-nm">ر.م</div><div class="tt-rl">دكتوراه دراسات دينية — جامعة تل أبيب</div></div>
                 </div>
             </div>
         </div>
@@ -628,30 +643,46 @@
 <section id="faq" class="faq-bg">
     <div class="container">
         <div class="s-hd rv">
-            <span class="s-eb">أسئلة شائعة</span>
-            <h2 class="s-ti">إجابات على أكثر الأسئلة تكراراً</h2>
+            <span class="s-eb">الأسئلة الشائعة</span>
+            <h2 class="s-ti">أسئلة متكررة حول الترجمة المعتمدة</h2>
+            <p class="s-de">إجابات على أكثر الأسئلة التي تصلنا من الطلاب والباحثين.</p>
             <div class="s-ln"></div>
         </div>
         <div class="faq-ls">
-            <div class="faq-it"><button class="faq-q" onclick="tgFaq(this)"><span>بين أي لغات تترجمون؟</span><i class="fas fa-chevron-down"></i></button><div class="faq-a"><div class="faq-ai">نترجم بين 5 لغات: الإنجليزية والفرنسية والألمانية والعبرية والعربية. الترجمة متاحة في كل الاتجاهات بين هذه اللغات — أي 20 اتجاه ترجمة مختلف.</div></div></div>
-            <div class="faq-it"><button class="faq-q" onclick="tgFaq(this)"><span>هل السعر يختلف حسب الاتجاه اللغوي؟</span><i class="fas fa-chevron-down"></i></button><div class="faq-a"><div class="faq-ai">لا، السعر موحد لجميع الاتجاهات اللغوية. يُحدد فقط حسب عدد صفحات الملف الأصلي ونوع الاعتماد المطلوب.</div></div></div>
-            <div class="faq-it"><button class="faq-q" onclick="tgFaq(this)"><span>ما الفرق بين الترجمة المعتمدة والترجمة المحلفة؟</span><i class="fas fa-chevron-down"></i></button><div class="faq-a"><div class="faq-ai">الترجمة المعتمدة تُخرج بختم من مكتب ترجمة معتمد رسمي وتُقبل في الأغلب الأكاديمي والرسمي. الترجمة المحلفة تحمل إضافة إلى ذلك ختم المترجم المحلف وتُقبل في الجهات القانونية والمحاكم والسفارات.</div></div></div>
-            <div class="faq-it"><button class="faq-q" onclick="tgFaq(this)"><span>كيف تضمنون جودة الترجمة بين اللغات؟</span><i class="fas fa-chevron-down"></i></button><div class="faq-a"><div class="faq-ai">كل ملف يمر بتدقيق مزدوج: مترجم متخصص في التخصص ولغة المصدر يترجم الملف، ثم خبير أكاديمي مستقل يراجعه. نتعاون أيضاً مع مكاتب ترجمة معتمدة لتطبيق أعلى معايير الجودة.</div></div></div>
-            <div class="faq-it"><button class="faq-q" onclick="tgFaq(this)"><span>كيف تحسبون عدد الصفحات؟</span><i class="fas fa-chevron-down"></i></button><div class="faq-a"><div class="faq-ai">نعتمد على عدد صفحات الملف الأصلي قبل الترجمة. الصفحة تُحسب حسب التنسيق الأصلي، بغض النظر عن حجم النص بعد الترجمة.</div></div></div>
-            <div class="faq-it"><button class="faq-q" onclick="tgFaq(this)"><span>هل تتعاملون مع جامعات محددة فقط؟</span><i class="fas fa-chevron-down"></i></button><div class="faq-a"><div class="faq-ai">لا، نخدم طلاب الجامعات حول العالم. ننسيق الملف وفقاً لدليل التنسيق المطلوب من جامعتك أياً كانت. فقط أخبرنا بالمعايير المطلوبة وسنلتزم بها.</div></div></div>
-            <div class="faq-it"><button class="faq-q" onclick="tgFaq(this)"><span>ما هي طرق الدفع المتاحة؟</span><i class="fas fa-chevron-down"></i></button><div class="faq-a"><div class="faq-ai">نقبل تحويل بنكي، عملات إلكترونية، بنوك إلكترونية، وتطبيقات دفع. للملفات الكبيرة يمكن التقسيط على دفعتين: نصف عند البدء ونصف عند التسليم.</div></div></div>
-            <div class="faq-it"><button class="faq-q" onclick="tgFaq(this)"><span>كم يستغرق تسليم الملف؟</span><i class="fas fa-chevron-down"></i></button><div class="faq-a"><div class="faq-ai">يعتمد على الحجم: عشر صفحات خلال يومين، وخمسون صفحة خلال ثلاثة إلى خمسة أيام عمل. للملفات الكبيرة نحدد جدولاً زمنياً عند الاتفاق. نوفر خدمة عاجلة بتكلفة إضافية محددة مسبقاً.</div></div></div>
-            <div class="faq-it"><button class="faq-q" onclick="tgFaq(this)"><span>هل ملفاتي آمنة ومحفوظة؟</span><i class="fas fa-chevron-down"></i></button><div class="faq-a"><div class="faq-ai">نعم. نتعامل مع ملفاتك بسرية تامة ولا نشاركها مع أي طرف. بعد التسليم النهائي نحذف الملفات من أجهزتنا خلال ثلاثين يوماً إلا إذا طلبت الاحتفاظ بها.</div></div></div>
+            <div class="faq-it rv">
+                <button class="faq-q" onclick="tgFaq(this)">كيف يتم احتساب عدد الصفحات؟<i class="fas fa-chevron-down"></i></button>
+                <div class="faq-a"><div class="faq-ai">نحن لا نعتمد على عدّاد كلمات آلي — بل نطلع على ملفك أولاً ونقدّر عدد الصفحات بدقة بناءً على طبيعة المستند. فمثلاً: معظم الشهادات الدراسية (شهادة ميلاد، زواج، خبرة) تُحتسب كصفحة واحدة مهما كان حجمها. أما المستندات المكتظة بالبيانات مثل بيان الدرجات وكشوف المواد فيُحتمل أن تتحول إلى صفحتين بعد الترجمة بسبب اختلاف طول النص بين اللغتين. الهدف أن تدفع فقط مقابل ما ستحصل عليه فعلاً — لا أكثر ولا أقل.</div></div>
+            </div>
+            <div class="faq-it rv">
+                <button class="faq-q" onclick="tgFaq(this)">متى ينطبق سعر ٤٥ ريال ومتى ٣٥ ريال؟<i class="fas fa-chevron-down"></i></button>
+                <div class="faq-a"><div class="faq-ai">سعر ٤٥ ريال للصفحة ينطبق تلقائياً عندما يزيد عدد صفحات ملفك عن 10 صفحات. وسعر ٣٥ ريال للصفحة ينطبق عندما يزيد العدد عن 100 صفحة. السعر يشمل الترجمة المعتمدة والتدقيق المزدوج والتنسيق الأكاديمي.</div></div>
+            </div>
+            <div class="faq-it rv">
+                <button class="faq-q" onclick="tgFaq(this)">هل الترجمة معتمدة ومقبولة رسمياً؟<i class="fas fa-chevron-down"></i></button>
+                <div class="faq-a"><div class="faq-ai">نعم، نتعاون مع مكاتب ترجمة معتمدة رسمياً وكل ملف يخرج بختم الاعتماد المطلوب. الترجمة مقبولة لدى الجامعات والسفارات والجهات الحكومية.</div></div>
+            </div>
+            <div class="faq-it rv">
+                <button class="faq-q" onclick="tgFaq(this)">هل السعر موحد لجميع اللغات؟<i class="fas fa-chevron-down"></i></button>
+                <div class="faq-a"><div class="faq-ai">الأسعار المعروضة هي للترجمة بين العربية والإنجليزية في الاتجاهين. أما بقية اللغات (الفرنسية، الألمانية، العبرية) فقد تختلف أسعارها قليلاً نظراً لاختلاف توفر المترجمين المعتمدين وتعقيد بعض اللغات. تواصل معنا لنعطيك السعر الدقيق لنوع الترجمة الذي تحتاجه.</div></div>
+            </div>
+            <div class="faq-it rv">
+                <button class="faq-q" onclick="tgFaq(this)">ما هي طرق الدفع المتاحة؟<i class="fas fa-chevron-down"></i></button>
+                <div class="faq-a"><div class="faq-ai">نقبل التحويل البنكي وSTC Pay ومدى وApple Pay. يتم إرسال تفاصيل الدفع بعد تأكيد الطلب والسعر.</div></div>
+            </div>
+            <div class="faq-it rv">
+                <button class="faq-q" onclick="tgFaq(this)">كم يستغرق تسليم الترجمة؟<i class="fas fa-chevron-down"></i></button>
+                <div class="faq-a"><div class="faq-ai">الملفات حتى 10 صفحات تسلّم خلال 24-48 ساعة. الملفات الأكبر يحدد موعد تسليمها حسب الحجم ويمكن تسليمها على مراحل معتمدة.</div></div>
+            </div>
         </div>
     </div>
 </section>
 
-<section>
+<section id="cta">
     <div class="container">
         <div class="cta-bx rv">
-            <h2>جاهز لبدء الترجمة المعتمدة؟</h2>
-            <p>أرسل ملفك الآن وسنتواصل معك خلال دقائق لتحديد اللغات ومتطلبات الاعتماد والموعد.</p>
-            <a href="https://wa.me/447403697337" target="_blank" class="btn"><i class="fab fa-whatsapp"></i> تواصل معنا عبر واتساب</a>
+            <h2>جاهز لترجمة ملفك؟</h2>
+            <p>أرسل ملفك الآن عبر الواتساب واحصل على عرض سعر فوري خلال دقائق</p>
+            <a href="https://wa.me/447403697337" target="_blank" class="btn"><i class="fab fa-whatsapp"></i> تواصل عبر واتساب</a>
         </div>
     </div>
 </section>
@@ -664,75 +695,178 @@
                     <div class="logo-mark"><span>ت</span></div>
                     <div class="logo-t"><span class="logo-n">تدقيق</span><span class="logo-d">Tadqiq.academy</span></div>
                 </a>
-                <p>ترجمة أكاديمية معتمدة ومحلفة بين 5 لغات في كل الاتجاهات. بالتعاون مع كبرى المكاتب المعتمدة وخبراء أكاديميين متخصصين.</p>
+                <p>ترجمة أكاديمية معتمدة ومحلفة بين 5 لغات في كل الاتجاهات. بالتعاون مع كبرى المكاتب المعتمدة.</p>
             </div>
-            <div class="ftr-cl"><h4>الخدمات</h4><ul><li><a href="#services">ترجمة معتمدة</a></li><li><a href="#services">ترجمة محلفة</a></li><li><a href="#services">تدقيق أكاديمي</a></li><li><a href="#services">تنسيق معتمد</a></li></ul></div>
-            <div class="ftr-cl"><h4>روابط سريعة</h4><ul><li><a href="#accredit">الاعتمادات</a></li><li><a href="#languages">اللغات</a></li><li><a href="#pricing">الأسعار</a></li><li><a href="#faq">الأسئلة الشائعة</a></li></ul></div>
-            <div class="ftr-cl"><h4>تواصل معنا</h4><ul>
-                <li><a href="tel:+447403697337" class="ftr-ph" dir="ltr"><i class="fas fa-phone-alt"></i>+44 7403 697 337</a></li>
-                <li><a href="https://wa.me/447403697337" target="_blank"><i class="fab fa-whatsapp" style="margin-left:6px;color:var(--green)"></i> واتساب</a></li>
-                <li><a href="mailto:info@tadqiq.academy"><i class="fas fa-envelope" style="margin-left:6px;color:var(--accent)"></i> info@tadqiq.academy</a></li>
-                <li><span class="ftr-dm" style="color:var(--fg-mid);font-size:12.5px">Tadqiq.academy</span></li>
-            </ul></div>
+            <div class="ftr-cl">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="#accredit">الاعتمادات</a></li>
+                    <li><a href="#languages">اللغات</a></li>
+                    <li><a href="#services">الخدمات</a></li>
+                    <li><a href="#pricing">الأسعار</a></li>
+                </ul>
+            </div>
+            <div class="ftr-cl">
+                <h4>المساعدة</h4>
+                <ul>
+                    <li><a href="#faq">الأسئلة الشائعة</a></li>
+                    <li><a href="https://wa.me/447403697337" target="_blank">تواصل معنا</a></li>
+                    <li><a href="#how">كيف نعمل</a></li>
+                </ul>
+            </div>
+            <div class="ftr-cl">
+                <h4>تواصل معنا</h4>
+                <ul>
+                    <li><a href="tel:+447403697337" class="ftr-ph"><i class="fas fa-phone-alt"></i>+44 7403 697 337</a></li>
+                    <li><a href="https://wa.me/447403697337" target="_blank"><i class="fab fa-whatsapp" style="color:var(--accent);margin-left:6px"></i>واتساب</a></li>
+                </ul>
+            </div>
         </div>
         <div class="ftr-bt">
-            <span class="ftr-cp">جميع الحقوق محفوظة لتدقيق 2025</span>
-            <span class="ftr-dm">Tadqiq.academy</span>
+            <span class="ftr-cp">© 2025 تدقيق — Tadqiq.academy. جميع الحقوق محفوظة.</span>
+            <span class="ftr-dm">Designed for academic excellence</span>
         </div>
     </div>
 </footer>
 
-<div class="mo-ov" id="moOv">
+<!-- Modal -->
+<div class="mo-ov" id="moOv" onclick="if(event.target===this)closeMo()">
     <div class="mo">
-        <div class="mo-top"><h2>اطلب ترجمتك المعتمدة</h2><button class="mo-x" onclick="clMo()" aria-label="إغلاق"><i class="fas fa-xmark"></i></button></div>
-        <form id="oForm" onsubmit="subForm(event)">
-            <div class="fg"><label>الاسم الكامل</label><input type="text" required placeholder="أدخل اسمك"></div>
-            <div class="fg"><label>البريد الإلكتروني</label><input type="email" required placeholder="example@email.com" dir="ltr" style="text-align:right"></div>
-            <div class="fg"><label>رقم الواتساب</label><input type="tel" required placeholder="+44 XXXX XXX XXX" dir="ltr" style="text-align:right"></div>
-            <div class="fg"><label>لغة المصدر</label><select id="fSrc"><option>العربية</option><option selected>الإنجليزية</option><option>الفرنسية</option><option>الألمانية</option><option>العبرية</option></select></div>
-            <div class="fg"><label>لغة الهدف</label><select id="fTgt"><option>العربية</option><option>الإنجليزية</option><option selected>الفرنسية</option><option>الألمانية</option><option>العبرية</option></select></div>
-            <div class="fg"><label>نوع الاعتماد المطلوب</label><select><option>ترجمة معتمدة (ختم مكتب معتمد)</option><option>ترجمة محلفة (ختم مترجم محلف)</option><option>ترجمة عادية بدون اعتماد</option></select></div>
-            <div class="fg"><label>الباقة</label><select id="fPkg"><option value="1-10 — $25/صفحة">1–10 صفحات — $25 للصفحة</option><option value="11-100 — $20/صفحة" selected>11–100 صفحات — $20 للصفحة</option><option value="100+ — $15/صفحة">100+ صفحة — $15 للصفحة</option></select></div>
-            <div class="fg"><label>عدد الصفحات التقريبي</label><input type="number" min="1" required placeholder="مثال: 45"></div>
-            <div class="fg"><label>ملاحظات (اختياري)</label><textarea placeholder="التخصص، نوع الوثيقة، جامعتك، موعد التسليم..."></textarea></div>
+        <div class="mo-top">
+            <h2>اطلب ترجمتك</h2>
+            <button class="mo-x" onclick="closeMo()"><i class="fas fa-times"></i></button>
+        </div>
+        <form onsubmit="subMo(event)">
+            <div class="fg">
+                <label>الاسم الكامل</label>
+                <input type="text" placeholder="أدخل اسمك" required>
+            </div>
+            <div class="fg">
+                <label>البريد الإلكتروني</label>
+                <input type="email" placeholder="example@email.com" dir="ltr" required>
+            </div>
+            <div class="fg">
+                <label>الشريحة المختارة</label>
+                <input type="text" id="moTier" readonly>
+            </div>
+            <div class="fg">
+                <label>لغة المصدر</label>
+                <select required>
+                    <option value="">اختر اللغة</option>
+                    <option>الإنجليزية</option>
+                    <option>الفرنسية</option>
+                    <option>الألمانية</option>
+                    <option>العبرية</option>
+                    <option>العربية</option>
+                </select>
+            </div>
+            <div class="fg">
+                <label>لغة الهدف</label>
+                <select required>
+                    <option value="">اختر اللغة</option>
+                    <option>الإنجليزية</option>
+                    <option>الفرنسية</option>
+                    <option>الألمانية</option>
+                    <option>العبرية</option>
+                    <option>العربية</option>
+                </select>
+            </div>
+            <div class="fg">
+                <label>ملاحظات إضافية</label>
+                <textarea placeholder="نوع الاعتماد، التخصص، موعد التسليم المطلوب..."></textarea>
+            </div>
             <button type="submit" class="fg-sub">إرسال الطلب</button>
-            <p class="fg-nt">سنتواصل معك عبر الواتساب خلال دقائق</p>
+            <p class="fg-nt">سنتواصل معك خلال ساعات عبر البريد أو الواتساب</p>
         </form>
     </div>
 </div>
 
-<div class="tst" id="tst"><i class="fas fa-check-circle"></i><span id="tstTx">تم إرسال طلبك بنجاح</span></div>
+<!-- Toast -->
+<div class="tst" id="tst"><i class="fas fa-check-circle"></i><span id="tstTx"></span></div>
 
 <script>
-const nb=document.getElementById('navbar');
-window.addEventListener('scroll',()=>nb.classList.toggle('scrolled',window.scrollY>30));
+// Navbar scroll
+window.addEventListener('scroll',function(){
+    document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>40);
+});
 
-const sls=document.querySelectorAll('.demo-sl'),dts=document.querySelectorAll('.demo-dot'),dlb=document.getElementById('demoLb');
-let ci=0;
-const lbls=['<strong>English</strong> ← <strong>العربية</strong>','<strong>Français</strong> ← <strong>English</strong>','<strong>Deutsch</strong> ← <strong>Français</strong>','<strong>עברית</strong> ← <strong>English</strong>','<strong>العربية</strong> ← <strong>English</strong>'];
-function shSl(i){sls.forEach((s,j)=>s.classList.toggle('on',j===i));dts.forEach((d,j)=>d.classList.toggle('on',j===i));dlb.innerHTML=lbls[i]}
-setInterval(()=>{ci=(ci+1)%sls.length;shSl(ci)},4000);
+// Reveal on scroll
+var rvObs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vs');rvObs.unobserve(e.target)}});
+},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv').forEach(function(el){rvObs.observe(el)});
 
-const ro=new IntersectionObserver(e=>{e.forEach((t,i)=>{if(t.isIntersecting){setTimeout(()=>t.target.classList.add('vs'),i*60);ro.unobserve(t.target)}})},{threshold:.05,rootMargin:'0px 0px -16px 0px'});
-document.querySelectorAll('.rv').forEach(e=>ro.observe(e));
+// Demo slider
+var demoLabels=[
+    '<strong>English</strong> ← <strong>العربية</strong>',
+    '<strong>Français</strong> ← <strong>English</strong>',
+    '<strong>Deutsch</strong> ← <strong>Français</strong>',
+    '<strong>עברית</strong> ← <strong>English</strong>',
+    '<strong>العربية</strong> ← <strong>English</strong>'
+];
+var dI=0,dT;
+function nextDemo(){
+    document.querySelectorAll('.demo-sl').forEach(function(s){s.classList.remove('on')});
+    document.querySelectorAll('.demo-dot').forEach(function(d){d.classList.remove('on')});
+    dI=(dI+1)%5;
+    document.querySelectorAll('.demo-sl')[dI].classList.add('on');
+    document.querySelectorAll('.demo-dot')[dI].classList.add('on');
+    document.getElementById('demoLb').innerHTML=demoLabels[dI];
+}
+dT=setInterval(nextDemo,3500);
+document.querySelector('.demo-h').addEventListener('mouseenter',function(){clearInterval(dT)});
+document.querySelector('.demo-h').addEventListener('mouseleave',function(){dT=setInterval(nextDemo,3500)});
 
-function tgFaq(b){const it=b.parentElement,op=it.classList.contains('op');document.querySelectorAll('.faq-it').forEach(i=>i.classList.remove('op'));if(!op)it.classList.add('op')}
+// FAQ toggle
+function tgFaq(btn){
+    var it=btn.parentElement;
+    var wasOpen=it.classList.contains('op');
+    document.querySelectorAll('.faq-it').forEach(function(f){f.classList.remove('op')});
+    if(!wasOpen) it.classList.add('op');
+}
 
-function calcCost(){const p=parseInt(document.getElementById('pgC').value);if(!p||p<1){document.getElementById('calcR').innerHTML='<span style="color:var(--accent)">يرجى إدخال عدد صحيح</span>';return}let pr,tr;if(p<=10){pr=25;tr='الشريحة الأولى (1–10 صفحات)'}else if(p<=100){pr=20;tr='الشريحة الثانية (11–100 صفحات)'}else{pr=15;tr='الشريحة الثالثة (100+ صفحات)'}const t=p*pr;document.getElementById('calcR').innerHTML=`التكلفة: <strong>$${t.toLocaleString()}</strong><br><span style="font-size:11.5px;color:var(--fg-dim)">${tr} — $${pr} × ${p} صفحة — السعر موحد لجميع الاتجاهات اللغوية</span>`}
-document.getElementById('pgC').addEventListener('input',calcCost);calcCost();
+// Modal
+function openMo(tier){
+    document.getElementById('moTier').value=tier+' — الترجمة المعتمدة';
+    document.getElementById('moOv').classList.add('on');
+    document.body.style.overflow='hidden';
+}
+function closeMo(){
+    document.getElementById('moOv').classList.remove('on');
+    document.body.style.overflow='';
+}
+function subMo(e){
+    e.preventDefault();
+    closeMo();
+    showTst('تم إرسال طلبك بنجاح! سنتواصل معك قريباً');
+    e.target.reset();
+}
 
-function openMo(pk){const s=document.getElementById('fPkg');for(let o of s.options)if(o.value.includes(pk)){o.selected=true;break}document.getElementById('moOv').classList.add('on');document.body.style.overflow='hidden'}
-function clMo(){document.getElementById('moOv').classList.remove('on');document.body.style.overflow=''}
-document.getElementById('moOv').addEventListener('click',e=>{if(e.target===e.currentTarget)clMo()});
-document.addEventListener('keydown',e=>{if(e.key==='Escape')clMo()});
+// Toast
+function showTst(txt){
+    var t=document.getElementById('tst');
+    document.getElementById('tstTx').textContent=txt;
+    t.classList.add('sh');
+    setTimeout(function(){t.classList.remove('sh')},3500);
+}
 
-const fSrc=document.getElementById('fSrc'),fTgt=document.getElementById('fTgt');
-fSrc.addEventListener('change',()=>{if(fSrc.value===fTgt.value){const opts=[...fTgt.options].map(o=>o.value).filter(v=>v!==fSrc.value);if(opts.length)fTgt.value=opts[0]}});
-fTgt.addEventListener('change',()=>{if(fTgt.value===fSrc.value){const opts=[...fSrc.options].map(o=>o.value).filter(v=>v!==fTgt.value);if(opts.length)fSrc.value=opts[0]}});
-
-function subForm(e){e.preventDefault();clMo();showTst('تم إرسال طلبك بنجاح، سنتواصل معك قريباً');e.target.reset()}
-
-function showTst(t){const ts=document.getElementById('tst');document.getElementById('tstTx').textContent=t;ts.classList.add('sh');setTimeout(()=>ts.classList.remove('sh'),3500)}
+// حاسبة التكلفة
+function calcCost(){
+    var n=parseInt(document.getElementById('pgC').value);
+    var r=document.getElementById('calcR');
+    if(!n||n<1){r.innerHTML='<span style="color:var(--rose)">يرجى إدخال عدد صفحات صحيح</span>';return}
+    var pp, tier;
+    if(n>100){
+        pp=35; tier='أكثر من 100 صفحة';
+    }else if(n>10){
+        pp=45; tier='أكثر من 10 صفحات';
+    }else{
+        pp=50; tier='حتى 10 صفحات';
+    }
+    var total=n*pp;
+    r.innerHTML='الشريحة: <strong>'+tier+'</strong> — السعر لكل صفحة: <strong>'+pp+' ريال</strong><br>التكلفة الإجمالية: <strong>'+total.toLocaleString('ar-SA')+' ريال سعودي</strong><br><span style="font-size:11px;color:var(--fg-dim);margin-top:4px;display:inline-block">* السعر للترجمة بين العربية والإنجليزية</span>';
+}
+calcCost();
 </script>
 </body>
 </html>
