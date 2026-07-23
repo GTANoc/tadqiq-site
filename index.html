@@ -52,7 +52,6 @@
         @keyframes drift{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(25px,-20px) scale(1.03)}66%{transform:translate(-18px,14px) scale(.97)}}
         .bg-dots{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:radial-gradient(rgba(201,168,76,0.018) 1px,transparent 1px);background-size:44px 44px}
 
-        /* نافبار */
         .navbar{position:fixed;top:0;left:0;right:0;z-index:100;transition:all .4s}
         .navbar.scrolled{background:rgba(6,11,20,0.82);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-bottom:1px solid var(--border)}
         .nav-in{display:flex;align-items:center;justify-content:space-between;height:70px}
@@ -74,7 +73,6 @@
         .nav-ph:hover{background:var(--accent)!important;color:var(--bg)!important;border-color:var(--accent)}
         .nav-ph i{font-size:11px}
 
-        /* هيرو */
         .hero{padding:128px 0 76px;position:relative;z-index:1}
         .hero-g{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
         .hero-eb{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;font-weight:700;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px}
@@ -92,7 +90,6 @@
         .hero-badge{display:inline-flex;align-items:center;gap:7px;background:var(--bg-card);border:1px solid var(--border);padding:7px 14px;border-radius:50px;font-size:12px;font-weight:600;color:var(--fg-mid)}
         .hero-badge i{color:var(--accent);font-size:12px}
 
-        /* عرض الهيرو الحي */
         .hero-demo{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px;position:relative;overflow:hidden}
         .hero-demo::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--blue),var(--rose),var(--teal),var(--indigo),var(--accent));background-size:200% 100%;animation:gmove 10s linear infinite}
         @keyframes gmove{0%{background-position:0 0}100%{background-position:200% 0}}
@@ -111,13 +108,11 @@
         .demo-tgt{background:var(--accent-bg);border:1px solid rgba(201,168,76,0.12);border-radius:var(--radius-sm);padding:14px 16px;font-size:13.5px;color:var(--fg);line-height:1.9;font-weight:500;overflow:hidden}
         .demo-badge{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:11px;font-weight:600;color:var(--green);background:var(--green-bg);padding:4px 14px;border-radius:50px}
 
-        /* شريط الثقة */
         .trust{padding:26px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;z-index:1}
         .trust-i{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap}
         .trust-it{display:flex;align-items:center;gap:9px;font-size:12.5px;font-weight:500;color:var(--fg-mid)}
         .trust-ic{width:32px;height:32px;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--accent)}
 
-        /* أقسام عامة */
         section{padding:92px 0;position:relative;z-index:1}
         .s-eb{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px}
         .s-ti{font-family:'Noto Kufi Arabic';font-size:clamp(24px,3.2vw,36px);font-weight:800;line-height:1.4;margin-bottom:12px}
@@ -126,7 +121,6 @@
         .s-hd .s-de{margin:0 auto}
         .s-ln{width:36px;height:3px;background:var(--accent);border-radius:3px;margin:16px auto 0}
 
-        /* الاعتمادات */
         .accredit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
         .accredit-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:30px 24px;text-align:center;transition:all .4s cubic-bezier(.16,1,.3,1);position:relative;overflow:hidden}
         .accredit-card::before{content:'';position:absolute;top:0;right:0;left:0;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:right;transition:transform .4s}
@@ -137,7 +131,6 @@
         .accredit-card h3{font-family:'Noto Kufi Arabic';font-size:16px;font-weight:700;margin-bottom:9px;overflow:hidden}
         .accredit-card p{font-size:13px;color:var(--fg-mid);line-height:1.85;overflow:hidden}
 
-        /* اللغات */
         .lang-g{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
         .lang-c{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px 18px;text-align:center;position:relative;overflow:hidden;transition:all .45s cubic-bezier(.16,1,.3,1);cursor:default}
         .lang-c::before{content:attr(data-letter);position:absolute;top:-16px;left:50%;transform:translateX(-50%);font-size:140px;font-weight:900;opacity:.02;line-height:1;pointer-events:none;transition:opacity .4s}
@@ -169,13 +162,11 @@
         .lang-c[data-l="he"]::after{background:linear-gradient(90deg,var(--teal),transparent)}
         .lang-c[data-l="ar"]::after{background:linear-gradient(90deg,var(--indigo),transparent)}
 
-        /* إشعار الاتجاهات */
         .lang-notice{text-align:center;margin-top:32px;overflow:hidden}
         .lang-notice p{display:inline-flex;align-items:center;gap:8px;background:var(--bg-card);border:1px solid var(--border);padding:10px 22px;border-radius:50px;font-size:13px;color:var(--fg-mid);font-weight:500}
         .lang-notice i{color:var(--accent);font-size:14px}
         .lang-notice strong{color:var(--fg-sec)}
 
-        /* الخطوات */
         .steps-g{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;position:relative}
         .steps-g::before{content:'';position:absolute;top:34px;right:12.5%;left:12.5%;height:1px;background:linear-gradient(90deg,transparent,var(--border-hi) 20%,var(--border-hi) 80%,transparent)}
         .st-c{text-align:center;position:relative;z-index:1}
@@ -184,7 +175,6 @@
         .st-c h3{font-family:'Noto Kufi Arabic';font-size:14.5px;font-weight:700;margin-bottom:7px;overflow:hidden}
         .st-c p{font-size:12.5px;color:var(--fg-mid);line-height:1.8;max-width:210px;margin:0 auto;overflow:hidden}
 
-        /* الخدمات */
         .svc-bg{background:var(--bg-raised);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
         .svc-g{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
         .svc-c{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:28px 24px;transition:all .35s cubic-bezier(.16,1,.3,1);position:relative;overflow:hidden}
@@ -195,7 +185,6 @@
         .svc-c h3{font-family:'Noto Kufi Arabic';font-size:15px;font-weight:700;margin-bottom:9px;overflow:hidden}
         .svc-c p{font-size:13px;color:var(--fg-mid);line-height:1.85;overflow:hidden}
 
-        /* التسعير */
         .pr-bg{background:var(--bg-raised);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
         .pr-g{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start}
         .pr-c{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px 32px;text-align:center;transition:all .35s cubic-bezier(.16,1,.3,1);position:relative;overflow:hidden}
@@ -220,7 +209,6 @@
         .pr-bt.sol{background:linear-gradient(135deg,var(--accent),var(--accent-lo));color:var(--bg);border-color:var(--accent);box-shadow:0 2px 14px rgba(201,168,76,0.2)}
         .pr-bt.sol:hover{box-shadow:0 4px 22px rgba(201,168,76,0.35);transform:translateY(-1px)}
 
-        /* حاسبة */
         .calc{max-width:460px;margin:44px auto 0;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:26px 28px;overflow:hidden}
         .calc h3{font-family:'Noto Kufi Arabic';font-size:15px;font-weight:700;margin-bottom:16px;text-align:center}
         .calc-r{display:flex;align-items:center;gap:10px;justify-content:center;flex-wrap:wrap}
@@ -231,7 +219,6 @@
         .calc-re{margin-top:14px;text-align:center;font-size:13px;color:var(--fg-mid);min-height:18px;line-height:1.8;overflow:hidden}
         .calc-re strong{color:var(--accent);font-size:20px;font-weight:800;font-family:'Noto Kufi Arabic'}
 
-        /* الشهادات */
         .tt-g{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
         .tt-c{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:26px;transition:all .3s;overflow:hidden}
         .tt-c:hover{transform:translateY(-2px);border-color:var(--border-hi);box-shadow:0 8px 28px rgba(0,0,0,0.15)}
@@ -243,7 +230,6 @@
         .tt-nm{font-weight:700;font-size:13px;overflow:hidden}
         .tt-rl{font-size:11.5px;color:var(--fg-dim);overflow:hidden}
 
-        /* FAQ */
         .faq-bg{background:var(--bg-raised);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
         .faq-ls{max-width:700px;margin:0 auto}
         .faq-it{border-bottom:1px solid var(--border)}
@@ -257,7 +243,6 @@
         .faq-it.op .faq-a{max-height:300px}
         .faq-ai{padding-bottom:18px;font-size:13.5px;color:var(--fg-mid);line-height:1.9;overflow:hidden}
 
-        /* CTA */
         .cta-bx{max-width:620px;margin:0 auto;background:linear-gradient(135deg,var(--accent-lo),var(--accent));border-radius:var(--radius-lg);padding:48px 40px;text-align:center;position:relative;overflow:hidden}
         .cta-bx::before{content:'';position:absolute;top:-50%;right:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 40%,rgba(255,255,255,0.06),transparent 60%);pointer-events:none}
         .cta-bx h2{font-family:'Noto Kufi Arabic';font-size:26px;font-weight:800;margin-bottom:10px;position:relative;color:var(--bg);overflow:hidden}
@@ -265,7 +250,6 @@
         .cta-bx .btn{background:var(--bg);color:var(--accent);font-weight:700;position:relative}
         .cta-bx .btn:hover{box-shadow:0 4px 22px rgba(0,0,0,0.25);transform:translateY(-2px)}
 
-        /* فوتر */
         .ftr{padding:48px 0 28px;border-top:1px solid var(--border);position:relative;z-index:1}
         .ftr-g{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:36px;margin-bottom:36px}
         .ftr-br p{font-size:12.5px;color:var(--fg-mid);line-height:1.85;margin-top:11px;max-width:260px;overflow:hidden}
@@ -279,7 +263,6 @@
         .ftr-cp{font-size:11.5px;color:var(--fg-dim)}
         .ftr-dm{font-size:11.5px;color:var(--fg-dim);direction:ltr;unicode-bidi:embed}
 
-        /* مودال */
         .mo-ov{position:fixed;inset:0;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);z-index:150;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .3s}
         .mo-ov.on{opacity:1;pointer-events:all}
         .mo{background:var(--bg-raised);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px;max-width:460px;width:100%;transform:scale(.95) translateY(10px);transition:transform .4s cubic-bezier(.16,1,.3,1);max-height:90vh;overflow-y:auto}
@@ -298,16 +281,13 @@
         .fg-sub:hover{box-shadow:0 4px 22px rgba(201,168,76,0.35)}
         .fg-nt{text-align:center;font-size:11.5px;color:var(--fg-dim);margin-top:10px;overflow:hidden}
 
-        /* توست */
         .tst{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--fg);color:var(--bg);padding:12px 24px;border-radius:50px;font-size:13.5px;font-weight:600;z-index:200;display:flex;align-items:center;gap:9px;box-shadow:0 10px 36px rgba(0,0,0,0.4);transition:transform .4s cubic-bezier(.16,1,.3,1);white-space:nowrap;overflow:hidden}
         .tst.sh{transform:translateX(-50%) translateY(0)}
         .tst i{color:var(--green)}
 
-        /* أنيميشن */
         .rv{opacity:0;transform:translateY(22px);transition:all .6s cubic-bezier(.16,1,.3,1)}
         .rv.vs{opacity:1;transform:translateY(0)}
 
-        /* ريسبونسف */
         @media(max-width:1100px){.lang-g{grid-template-columns:repeat(3,1fr)}}
         @media(max-width:960px){
             .hero-g{grid-template-columns:1fr;gap:44px}
@@ -346,7 +326,6 @@
 <div class="bg-fx"><div class="bg-orb"></div><div class="bg-orb"></div><div class="bg-orb"></div></div>
 <div class="bg-dots"></div>
 
-<!-- نافبار -->
 <nav class="navbar" id="navbar">
     <div class="container">
         <div class="nav-in">
@@ -365,7 +344,6 @@
     </div>
 </nav>
 
-<!-- هيرو -->
 <header class="hero">
     <div class="container">
         <div class="hero-g">
@@ -395,35 +373,30 @@
                     </div>
                 </div>
                 <div class="demo-slides">
-                    <!-- الإنجليزية ← العربية -->
                     <div class="demo-sl on">
                         <div class="demo-src" dir="ltr" style="text-align:left">The influence of climate change on global food security and agricultural sustainability</div>
                         <div class="demo-ar"><i class="fas fa-arrow-down"></i></div>
                         <div class="demo-tgt">تأثير تغيّر المناخ على الأمن الغذائي العالمي والاستدامة الزراعية</div>
                         <div class="demo-badge"><i class="fas fa-check" style="font-size:9px"></i> تمت الترجمة</div>
                     </div>
-                    <!-- الفرنسية ← الإنجليزية -->
                     <div class="demo-sl">
                         <div class="demo-src" dir="ltr" style="text-align:left">L'impact de l'intelligence artificielle sur la précision diagnostique en radiologie</div>
                         <div class="demo-ar"><i class="fas fa-arrow-down"></i></div>
                         <div class="demo-tgt" dir="ltr" style="text-align:left">The impact of artificial intelligence on diagnostic accuracy in radiology</div>
                         <div class="demo-badge"><i class="fas fa-check" style="font-size:9px"></i> تمت الترجمة</div>
                     </div>
-                    <!-- الألمانية ← الفرنسية -->
                     <div class="demo-sl">
                         <div class="demo-src" dir="ltr" style="text-align:left">Die Auswirkungen der künstlichen Intelligenz auf die medizinische Bildgebung</div>
                         <div class="demo-ar"><i class="fas fa-arrow-down"></i></div>
                         <div class="demo-tgt" dir="ltr" style="text-align:left">L'impact de l'intelligence artificielle sur l'imagerie médicale</div>
                         <div class="demo-badge"><i class="fas fa-check" style="font-size:9px"></i> تمت الترجمة</div>
                     </div>
-                    <!-- العبرية ← الإنجليزية -->
                     <div class="demo-sl">
                         <div class="demo-src" style="direction:rtl">ההשפעה של למידת מכונה על אבחון מחלות כרוניות</div>
                         <div class="demo-ar"><i class="fas fa-arrow-down"></i></div>
                         <div class="demo-tgt" dir="ltr" style="text-align:left">The impact of machine learning on the diagnosis of chronic diseases</div>
                         <div class="demo-badge"><i class="fas fa-check" style="font-size:9px"></i> تمت الترجمة</div>
                     </div>
-                    <!-- العربية ← الإنجليزية -->
                     <div class="demo-sl">
                         <div class="demo-src" style="direction:rtl">دور التحول الرقمي في تطوير قطاع التعليم العالي في الدول النامية</div>
                         <div class="demo-ar"><i class="fas fa-arrow-down"></i></div>
@@ -436,7 +409,6 @@
     </div>
 </header>
 
-<!-- شريط الثقة -->
 <div class="trust">
     <div class="container">
         <div class="trust-i">
@@ -449,7 +421,6 @@
     </div>
 </div>
 
-<!-- الاعتمادات -->
 <section id="accredit">
     <div class="container">
         <div class="s-hd rv">
@@ -459,41 +430,16 @@
             <div class="s-ln"></div>
         </div>
         <div class="accredit-grid">
-            <div class="accredit-card rv">
-                <div class="accredit-icon"><i class="fas fa-stamp"></i></div>
-                <h3>ترجمة معتمدة</h3>
-                <p>كل ملف يُخرج بختم الاعتماد الرسمي من مكاتبنا الشريكة المعتمدة، مقبول لدى الجهات الرسمية والأكاديمية.</p>
-            </div>
-            <div class="accredit-card rv">
-                <div class="accredit-icon"><i class="fas fa-gavel"></i></div>
-                <h3>ترجمة محلفة</h3>
-                <p>نوفر خيار الترجمة المحلفة للمستندات التي تتطلب ذلك، مع ختم المترجم المحلف المعتمد قانونياً.</p>
-            </div>
-            <div class="accredit-card rv">
-                <div class="accredit-icon"><i class="fas fa-handshake"></i></div>
-                <h3>مكاتب شريكة معتمدة</h3>
-                <p>نتعاون مع كبرى مكاتب الترجمة المعتمدة لضمان أعلى معايير الجودة والاعتماد في كل اتجاه لغوي.</p>
-            </div>
-            <div class="accredit-card rv">
-                <div class="accredit-icon"><i class="fas fa-user-tie"></i></div>
-                <h3>خبراء أكاديميون</h3>
-                <p>فريق من المراجعين الأكاديميين المتخصصين يراجعون كل ترجمة لضمان دقة المصطلحات والسياق العلمي.</p>
-            </div>
-            <div class="accredit-card rv">
-                <div class="accredit-icon"><i class="fas fa-certificate"></i></div>
-                <h3>شهادة جودة لكل ملف</h3>
-                <p>يصحب كل ملف مترجم شهادة جودة مفصلة توضح مراحل المراجعة والمعايير المطبّقة.</p>
-            </div>
-            <div class="accredit-card rv">
-                <div class="accredit-icon"><i class="fas fa-magnifying-glass"></i></div>
-                <h3>تدقيق مزدوج</h3>
-                <p>كل ملف يمر بتدقيق من مترجم متخصص ثم مراجعة مستقلة من خبير أكاديمي آخر لضمان الدقة القصوى.</p>
-            </div>
+            <div class="accredit-card rv"><div class="accredit-icon"><i class="fas fa-stamp"></i></div><h3>ترجمة معتمدة</h3><p>كل ملف يُخرج بختم الاعتماد الرسمي من مكاتبنا الشريكة المعتمدة، مقبول لدى الجهات الرسمية والأكاديمية.</p></div>
+            <div class="accredit-card rv"><div class="accredit-icon"><i class="fas fa-gavel"></i></div><h3>ترجمة محلفة</h3><p>نوفر خيار الترجمة المحلفة للمستندات التي تتطلب ذلك، مع ختم المترجم المحلف المعتمد قانونياً.</p></div>
+            <div class="accredit-card rv"><div class="accredit-icon"><i class="fas fa-handshake"></i></div><h3>مكاتب شريكة معتمدة</h3><p>نتعاون مع كبرى مكاتب الترجمة المعتمدة لضمان أعلى معايير الجودة والاعتماد في كل اتجاه لغوي.</p></div>
+            <div class="accredit-card rv"><div class="accredit-icon"><i class="fas fa-user-tie"></i></div><h3>خبراء أكاديميون</h3><p>فريق من المراجعين الأكاديميين المتخصصين يراجعون كل ترجمة لضمان دقة المصطلحات والسياق العلمي.</p></div>
+            <div class="accredit-card rv"><div class="accredit-icon"><i class="fas fa-certificate"></i></div><h3>شهادة جودة لكل ملف</h3><p>يصحب كل ملف مترجم شهادة جودة مفصلة توضح مراحل المراجعة والمعايير المطبّقة.</p></div>
+            <div class="accredit-card rv"><div class="accredit-icon"><i class="fas fa-magnifying-glass"></i></div><h3>تدقيق مزدوج</h3><p>كل ملف يمر بتدقيق من مترجم متخصص ثم مراجعة مستقلة من خبير أكاديمي آخر لضمان الدقة القصوى.</p></div>
         </div>
     </div>
 </section>
 
-<!-- اللغات — 5 لغات في كل الاتجاهات -->
 <section id="languages">
     <div class="container">
         <div class="s-hd rv">
@@ -503,7 +449,6 @@
             <div class="s-ln"></div>
         </div>
         <div class="lang-g">
-            <!-- الإنجليزية -->
             <div class="lang-c rv" data-l="en" data-letter="En">
                 <div class="lang-nm" dir="ltr">English</div>
                 <div class="lang-ar-name">الإنجليزية</div>
@@ -511,7 +456,6 @@
                 <div class="lang-arr"><i class="fas fa-arrow-down"></i></div>
                 <div class="lang-tr">"أثر الذكاء الاصطناعي على دقة التشخيص في علم الأشعة"</div>
             </div>
-            <!-- الفرنسية -->
             <div class="lang-c rv" data-l="fr" data-letter="Fr">
                 <div class="lang-nm" dir="ltr">Français</div>
                 <div class="lang-ar-name">الفرنسية</div>
@@ -519,7 +463,6 @@
                 <div class="lang-arr"><i class="fas fa-arrow-down"></i></div>
                 <div class="lang-tr" dir="ltr" style="text-align:left">"The impact of artificial intelligence on diagnostic accuracy in radiology"</div>
             </div>
-            <!-- الألمانية -->
             <div class="lang-c rv" data-l="de" data-letter="De">
                 <div class="lang-nm" dir="ltr">Deutsch</div>
                 <div class="lang-ar-name">الألمانية</div>
@@ -527,7 +470,6 @@
                 <div class="lang-arr"><i class="fas fa-arrow-down"></i></div>
                 <div class="lang-tr" dir="ltr" style="text-align:left">"The effect of artificial intelligence on diagnostic accuracy"</div>
             </div>
-            <!-- العبرية -->
             <div class="lang-c rv" data-l="he" data-letter="עב">
                 <div class="lang-nm" style="direction:rtl">עברית</div>
                 <div class="lang-ar-name">العبرية</div>
@@ -535,7 +477,6 @@
                 <div class="lang-arr"><i class="fas fa-arrow-down"></i></div>
                 <div class="lang-tr" dir="ltr" style="text-align:left">"The impact of artificial intelligence on diagnostic accuracy in radiology"</div>
             </div>
-            <!-- العربية -->
             <div class="lang-c rv" data-l="ar" data-letter="عر">
                 <div class="lang-nm">العربية</div>
                 <div class="lang-ar-name">مصدر وهدف</div>
@@ -544,14 +485,12 @@
                 <div class="lang-tr" dir="ltr" style="text-align:left">"The role of digital transformation in developing higher education in developing countries"</div>
             </div>
         </div>
-        <!-- إشعار الاتجاهات -->
         <div class="lang-notice rv">
             <p><i class="fas fa-arrows-left-right"></i> الترجمة متاحة بين <strong>كل اللغات الخمس في الاتجاهين</strong> — 20 اتجاه ترجمة: إنجليزية ← فرنسية، ألمانية ← إنجليزية، عربية ← فرنسية، وغيرها الكثير.</p>
         </div>
     </div>
 </section>
 
-<!-- كيف نعمل -->
 <section id="how">
     <div class="container">
         <div class="s-hd rv">
@@ -561,7 +500,7 @@
             <div class="s-ln"></div>
         </div>
         <div class="steps-g">
-            <div class="st-c rv"><div class="st-n">1</div><h3>أرسل ملفك</h3><p>ارفع ملفك عبر الواتساب مع تحديد لغة المصدر ولة الهدف والتخصص ومتطلبات الاعتماد.</p></div>
+            <div class="st-c rv"><div class="st-n">1</div><h3>أرسل ملفك</h3><p>ارفع ملفك عبر الواتساب مع تحديد لغة المصدر ولغة الهدف والتخصص ومتطلبات الاعتماد.</p></div>
             <div class="st-c rv"><div class="st-n">2</div><h3>نحدد السعر والوقت</h3><p>نراجع الملف ونحدد السعر حسب عدد الصفحات ونوع الاعتماد والموعد.</p></div>
             <div class="st-c rv"><div class="st-n">3</div><h3>الترجمة والاعتماد</h3><p>مترجم معتمد يترجم الملف ثم يمر بتدقيق مزدوج قبل إضافة ختم الاعتماد أو التحويف.</p></div>
             <div class="st-c rv"><div class="st-n">4</div><h3>استلم معتمداً</h3><p>تستلم ملفك معتمداً ومحلفاً حسب الطلب مع شهادة الجودة والتعديلات المجانية.</p></div>
@@ -569,7 +508,6 @@
     </div>
 </section>
 
-<!-- الخدمات -->
 <section id="services" class="svc-bg">
     <div class="container">
         <div class="s-hd rv">
@@ -589,7 +527,6 @@
     </div>
 </section>
 
-<!-- التسعير -->
 <section id="pricing" class="pr-bg">
     <div class="container">
         <div class="s-hd rv">
@@ -651,7 +588,6 @@
     </div>
 </section>
 
-<!-- الشهادات -->
 <section id="testimonials">
     <div class="container">
         <div class="s-hd rv">
@@ -679,17 +615,16 @@
             </div>
             <div class="tt-c rv">
                 <div class="tt-st"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p class="tt-tx">طلبت ترجمة معتمدة من العبرية إلى العربية لأطروحتي. الملف وصل بختم الاعتماد وكان مقبولاً فوراً من القسم.</p>
+                <p class="tt-tx">طلبت ترجمة معتمدة من الإنجليزية إلى العربية لرسالة الدكتوراه في القانون الدولي. الملف وصل بختم الاعتماد وكان مقبولاً فوراً من القسم.</p>
                 <div class="tt-au">
-                    <div class="tt-av">ر.م</div>
-                    <div><div class="tt-nm">ر.م</div><div class="tt-rl">دكتوراه علوم سياسية — جامعة تل أبيب</div></div>
+                    <div class="tt-av">ع.ف</div>
+                    <div><div class="tt-nm">ع.ف</div><div class="tt-rl">دكتوراه قانون دولي — جامعة لندن</div></div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- FAQ -->
 <section id="faq" class="faq-bg">
     <div class="container">
         <div class="s-hd rv">
@@ -704,14 +639,13 @@
             <div class="faq-it"><button class="faq-q" onclick="tgFaq(this)"><span>كيف تضمنون جودة الترجمة بين اللغات؟</span><i class="fas fa-chevron-down"></i></button><div class="faq-a"><div class="faq-ai">كل ملف يمر بتدقيق مزدوج: مترجم متخصص في التخصص ولغة المصدر يترجم الملف، ثم خبير أكاديمي مستقل يراجعه. نتعاون أيضاً مع مكاتب ترجمة معتمدة لتطبيق أعلى معايير الجودة.</div></div></div>
             <div class="faq-it"><button class="faq-q" onclick="tgFaq(this)"><span>كيف تحسبون عدد الصفحات؟</span><i class="fas fa-chevron-down"></i></button><div class="faq-a"><div class="faq-ai">نعتمد على عدد صفحات الملف الأصلي قبل الترجمة. الصفحة تُحسب حسب التنسيق الأصلي، بغض النظر عن حجم النص بعد الترجمة.</div></div></div>
             <div class="faq-it"><button class="faq-q" onclick="tgFaq(this)"><span>هل تتعاملون مع جامعات محددة فقط؟</span><i class="fas fa-chevron-down"></i></button><div class="faq-a"><div class="faq-ai">لا، نخدم طلاب الجامعات حول العالم. ننسيق الملف وفقاً لدليل التنسيق المطلوب من جامعتك أياً كانت. فقط أخبرنا بالمعايير المطلوبة وسنلتزم بها.</div></div></div>
-            <div class="faq-it"><button class="faq-q" onclick="tgFaq(this)"><span>ما هي طرق الدفع المتاحة؟</span><i class="fas fa-chevron-down"></i></button><div class="faq-a"><div class="faq-ai">نقبل التحويل البنكي، مدى، ستاي بـي، وأبل بـي. للملفات الكبيرة يمكن التقسيط على دفعتين: نصف عند البدء ونصف عند التسليم.</div></div></div>
+            <div class="faq-it"><button class="faq-q" onclick="tgFaq(this)"><span>ما هي طرق الدفع المتاحة؟</span><i class="fas fa-chevron-down"></i></button><div class="faq-a"><div class="faq-ai">نقبل تحويل بنكي، عملات إلكترونية، بنوك إلكترونية، وتطبيقات دفع. للملفات الكبيرة يمكن التقسيط على دفعتين: نصف عند البدء ونصف عند التسليم.</div></div></div>
             <div class="faq-it"><button class="faq-q" onclick="tgFaq(this)"><span>كم يستغرق تسليم الملف؟</span><i class="fas fa-chevron-down"></i></button><div class="faq-a"><div class="faq-ai">يعتمد على الحجم: عشر صفحات خلال يومين، وخمسون صفحة خلال ثلاثة إلى خمسة أيام عمل. للملفات الكبيرة نحدد جدولاً زمنياً عند الاتفاق. نوفر خدمة عاجلة بتكلفة إضافية محددة مسبقاً.</div></div></div>
             <div class="faq-it"><button class="faq-q" onclick="tgFaq(this)"><span>هل ملفاتي آمنة ومحفوظة؟</span><i class="fas fa-chevron-down"></i></button><div class="faq-a"><div class="faq-ai">نعم. نتعامل مع ملفاتك بسرية تامة ولا نشاركها مع أي طرف. بعد التسليم النهائي نحذف الملفات من أجهزتنا خلال ثلاثين يوماً إلا إذا طلبت الاحتفاظ بها.</div></div></div>
         </div>
     </div>
 </section>
 
-<!-- CTA -->
 <section>
     <div class="container">
         <div class="cta-bx rv">
@@ -722,7 +656,6 @@
     </div>
 </section>
 
-<!-- فوتر -->
 <footer class="ftr">
     <div class="container">
         <div class="ftr-g">
@@ -749,7 +682,6 @@
     </div>
 </footer>
 
-<!-- مودال -->
 <div class="mo-ov" id="moOv">
     <div class="mo">
         <div class="mo-top"><h2>اطلب ترجمتك المعتمدة</h2><button class="mo-x" onclick="clMo()" aria-label="إغلاق"><i class="fas fa-xmark"></i></button></div>
@@ -772,49 +704,34 @@
 <div class="tst" id="tst"><i class="fas fa-check-circle"></i><span id="tstTx">تم إرسال طلبك بنجاح</span></div>
 
 <script>
-/* نافبار */
 const nb=document.getElementById('navbar');
 window.addEventListener('scroll',()=>nb.classList.toggle('scrolled',window.scrollY>30));
 
-/* عرض الهيرو الحي — 5 اتجاهات */
 const sls=document.querySelectorAll('.demo-sl'),dts=document.querySelectorAll('.demo-dot'),dlb=document.getElementById('demoLb');
 let ci=0;
-const lbls=[
-    '<strong>English</strong> ← <strong>العربية</strong>',
-    '<strong>Français</strong> ← <strong>English</strong>',
-    '<strong>Deutsch</strong> ← <strong>Français</strong>',
-    '<strong>עברית</strong> ← <strong>English</strong>',
-    '<strong>العربية</strong> ← <strong>English</strong>'
-];
+const lbls=['<strong>English</strong> ← <strong>العربية</strong>','<strong>Français</strong> ← <strong>English</strong>','<strong>Deutsch</strong> ← <strong>Français</strong>','<strong>עברית</strong> ← <strong>English</strong>','<strong>العربية</strong> ← <strong>English</strong>'];
 function shSl(i){sls.forEach((s,j)=>s.classList.toggle('on',j===i));dts.forEach((d,j)=>d.classList.toggle('on',j===i));dlb.innerHTML=lbls[i]}
 setInterval(()=>{ci=(ci+1)%sls.length;shSl(ci)},4000);
 
-/* أنيميشن الظهور */
 const ro=new IntersectionObserver(e=>{e.forEach((t,i)=>{if(t.isIntersecting){setTimeout(()=>t.target.classList.add('vs'),i*60);ro.unobserve(t.target)}})},{threshold:.05,rootMargin:'0px 0px -16px 0px'});
 document.querySelectorAll('.rv').forEach(e=>ro.observe(e));
 
-/* FAQ */
 function tgFaq(b){const it=b.parentElement,op=it.classList.contains('op');document.querySelectorAll('.faq-it').forEach(i=>i.classList.remove('op'));if(!op)it.classList.add('op')}
 
-/* حاسبة */
 function calcCost(){const p=parseInt(document.getElementById('pgC').value);if(!p||p<1){document.getElementById('calcR').innerHTML='<span style="color:var(--accent)">يرجى إدخال عدد صحيح</span>';return}let pr,tr;if(p<=10){pr=25;tr='الشريحة الأولى (1–10 صفحات)'}else if(p<=100){pr=20;tr='الشريحة الثانية (11–100 صفحات)'}else{pr=15;tr='الشريحة الثالثة (100+ صفحات)'}const t=p*pr;document.getElementById('calcR').innerHTML=`التكلفة: <strong>$${t.toLocaleString()}</strong><br><span style="font-size:11.5px;color:var(--fg-dim)">${tr} — $${pr} × ${p} صفحة — السعر موحد لجميع الاتجاهات اللغوية</span>`}
 document.getElementById('pgC').addEventListener('input',calcCost);calcCost();
 
-/* مودال */
 function openMo(pk){const s=document.getElementById('fPkg');for(let o of s.options)if(o.value.includes(pk)){o.selected=true;break}document.getElementById('moOv').classList.add('on');document.body.style.overflow='hidden'}
 function clMo(){document.getElementById('moOv').classList.remove('on');document.body.style.overflow=''}
 document.getElementById('moOv').addEventListener('click',e=>{if(e.target===e.currentTarget)clMo()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')clMo()});
 
-/* منع اختيار نفس اللغة كمصدر وهدف */
 const fSrc=document.getElementById('fSrc'),fTgt=document.getElementById('fTgt');
 fSrc.addEventListener('change',()=>{if(fSrc.value===fTgt.value){const opts=[...fTgt.options].map(o=>o.value).filter(v=>v!==fSrc.value);if(opts.length)fTgt.value=opts[0]}});
 fTgt.addEventListener('change',()=>{if(fTgt.value===fSrc.value){const opts=[...fSrc.options].map(o=>o.value).filter(v=>v!==fTgt.value);if(opts.length)fSrc.value=opts[0]}});
 
-/* إرسال */
 function subForm(e){e.preventDefault();clMo();showTst('تم إرسال طلبك بنجاح، سنتواصل معك قريباً');e.target.reset()}
 
-/* توست */
 function showTst(t){const ts=document.getElementById('tst');document.getElementById('tstTx').textContent=t;ts.classList.add('sh');setTimeout(()=>ts.classList.remove('sh'),3500)}
 </script>
 </body>
